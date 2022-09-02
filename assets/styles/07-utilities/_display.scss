@@ -1,0 +1,29 @@
+@import './../02-tools/grid';
+
+.d {
+    @include styleAllBreakpoints() {
+        &-block {
+            display: block;
+        }
+
+        &-flex {
+            display: flex;
+        }
+
+        &-grid {
+            display: grid;
+        }
+
+        &-inline {
+            display: inline;
+        }
+
+        &-inline-block {
+            display: inline-block;
+        }
+
+        &-none {
+            display: none;
+        }
+    }
+}

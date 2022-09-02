@@ -1,0 +1,19 @@
+@import './../01-settings/grid';
+@import './../02-tools/grid';
+
+.column {
+    @include styleAllBreakpoints() {
+        flex: 1;
+    
+        &-none {
+            flex: none;
+            width: unset;
+        }
+
+        @for $i from 1 through $grid-base {
+            &-#{$i} {
+                width: calc((#{$i} / #{$grid-base}) * 100%);
+            }
+        }
+    }
+}

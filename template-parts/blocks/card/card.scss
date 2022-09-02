@@ -1,0 +1,11 @@
+@import './../../../assets/styles/01-settings/typography';
+
+.card {
+    h3 {
+        font-family: $font-sans;
+    }
+
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,7 @@
+@import './../01-settings/typography';
+
+p {
+    margin: 0 0 1em;
+    font-size: map-get($font-sizes, 3);
+    line-height: map-get($line-heights, 3);
+}

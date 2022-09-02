@@ -1,0 +1,45 @@
+@import './../01-settings/colors';
+@import './../02-tools/grid';
+
+.hamburger {
+    width: 40px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    &__bar {
+        position: relative;
+        width: 100%;
+        height: 3px;
+        background: $white;
+        transition: .2s linear;
+
+        &:nth-child(2) {
+            margin: 6px 0;
+        }
+    }
+
+    @include styleBreakpoint('lg') {
+        display: none;
+    }
+}
+
+.nav-open {
+    & .hamburger {
+        &__bar {
+            &:nth-child(1) {
+                top: 9px;
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                top: -9px;
+            }
+        }
+    }
+}

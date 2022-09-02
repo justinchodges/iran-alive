@@ -1,0 +1,13 @@
+@import './../01-settings/grid';
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: map-get($gutters, 2) * -1;
+    margin-left: map-get($gutters, 2) * -1;
+
+    & > * {
+        padding-right: map-get($gutters, 2);
+        padding-left: map-get($gutters, 2);
+    }
+}

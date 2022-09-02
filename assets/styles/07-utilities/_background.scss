@@ -1,0 +1,12 @@
+@import './../01-settings/colors';
+@import './../02-tools/grid';
+
+.bg {
+    @include styleAllBreakpoints() {
+        @each $key, $value in $colors {
+            &-#{$key} {
+                background: $value;
+            }
+        }
+    }
+}

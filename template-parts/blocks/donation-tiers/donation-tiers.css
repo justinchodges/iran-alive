@@ -1,0 +1,32 @@
+.donation-tiers {
+  width: 100%;
+}
+.donation-tiers > tbody > tr > th, .donation-tiers > tbody > tr > td {
+  padding: 1rem 0;
+}
+.donation-tiers > tbody > tr > th {
+  font-family: "Crimson Text", Times New Roman, serif;
+  font-size: 4rem;
+  text-align: left;
+}
+.donation-tiers > tbody > tr > td {
+  font-size: 1.5rem;
+}
+@media (max-width: 45.49rem) {
+  .donation-tiers {
+    display: block;
+  }
+  .donation-tiers > tbody, .donation-tiers > tbody > tr, .donation-tiers > tbody > tr > th, .donation-tiers > tbody > tr > td {
+    display: block;
+  }
+  .donation-tiers > tbody > tr > th {
+    padding: 1rem 0 0;
+    text-align: center;
+  }
+  .donation-tiers > tbody > tr > td {
+    padding: 0 0 1rem;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=donation-tiers.css.map */

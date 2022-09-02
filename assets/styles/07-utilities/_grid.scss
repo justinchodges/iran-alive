@@ -1,0 +1,190 @@
+@import './../01-settings/grid';
+@import './../02-tools/grid';
+
+.g {
+    @each $key, $value in $gutters {
+        @include styleAllBreakpoints() {
+            &-#{$key} {
+                margin-right: $value * -1;
+                margin-left: $value * -1;
+
+                & > * {
+                    padding-right: $value;
+                    padding-left: $value;
+                }
+            }
+        }
+    }
+}
+
+.m {
+    @each $key, $value in $spacing {
+        @include styleAllBreakpoints() {
+            &-#{$key} {
+                margin: $value;
+            }
+
+            &-y-#{$key} {
+                margin-top: $value;
+                margin-bottom: $value;
+            }
+
+            &-x-#{$key} {
+                margin-right: $value;
+                margin-left: $value;
+            }
+
+            &-t-#{$key} {
+                margin-top: $value;
+            }
+
+            &-b-#{$key} {
+                margin-bottom: $value;
+            }
+
+            &-r-#{$key} {
+                margin-right: $value;
+            }
+
+            &-l-#{$key} {
+                margin-left: $value;
+            }
+
+            @if $value > 0 {
+                &-n#{$key} {
+                    margin: $value * -1;
+                }
+    
+                &-y-n#{$key} {
+                    margin-top: $value * -1;
+                    margin-bottom: $value * -1;
+                }
+    
+                &-x-n#{$key} {
+                    margin-right: $value * -1;
+                    margin-left: $value * -1;
+                }
+    
+                &-t-n#{$key} {
+                    margin-top: $value * -1;
+                }
+    
+                &-b-n#{$key} {
+                    margin-bottom: $value * -1;
+                }
+    
+                &-r-n#{$key} {
+                    margin-right: $value * -1;
+                }
+    
+                &-l-n#{$key} {
+                    margin-left: $value * -1;
+                }
+            }
+        }
+    }
+}
+
+.p {
+    @each $key, $value in $spacing {
+        @include styleAllBreakpoints() {
+            &-#{$key} {
+                padding: $value;
+            }
+
+            &-y-#{$key} {
+                padding-top: $value;
+                padding-bottom: $value;
+            }
+
+            &-x-#{$key} {
+                padding-right: $value;
+                padding-left: $value;
+            }
+
+            &-t-#{$key} {
+                padding-top: $value;
+            }
+
+            &-b-#{$key} {
+                padding-bottom: $value;
+            }
+
+            &-r-#{$key} {
+                padding-right: $value;
+            }
+
+            &-l-#{$key} {
+                padding-left: $value;
+            }
+        }
+    }
+}
+
+.align-items {
+    @include styleAllBreakpoints() {
+        &-center {
+            align-items: center;
+        }
+
+        &-end {
+            align-items: flex-end;
+        }
+
+        &-start {
+            align-items: flex-start;
+        }
+    }
+}
+
+.justify-content {
+    @include styleAllBreakpoints() {
+        &-center {
+            justify-content: center;
+        }
+
+        &-end {
+            justify-content: flex-end;
+        }
+
+        &-start {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.justify-self {
+    @include styleAllBreakpoints() {
+        &-center {
+            justify-self: center;
+        }
+
+        &-end {
+            justify-self: flex-end;
+        }
+
+        &-start {
+            justify-self: flex-start;
+        }
+    }
+}
+
+.order {
+    @include styleAllBreakpoints() {
+        &-0 {
+            order: 0;
+        }
+
+        &-1 {
+            order: 1;
+        }
+
+        &-2 {
+            order: 2;
+        }
+
+        &-3 {
+            order: 3;
+        }
+    }
+}

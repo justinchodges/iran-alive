@@ -1,0 +1,30 @@
+$breakpoints: (
+    xs: 20rem,
+    sm: 32.5rem,
+    md: 45.5rem,
+    lg: 62.5rem,
+    xl: 80rem
+);
+
+$grid-base: 12;
+
+$gutters: (
+    0: 0,
+    1: .5rem,
+    2: 1rem,
+    3: 2rem
+);
+
+$spacing: (
+    0: 0,
+    1: .5rem,
+    2: 1rem,
+    3: 1.5rem,
+    4: 2rem,
+    5: 3rem,
+    6: 4rem,
+    7: 5rem,
+    8: 6rem,
+    9: 7rem,
+    10: 8rem
+);

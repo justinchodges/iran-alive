@@ -1,0 +1,48 @@
+.wpcf7 {
+    form.wpcf7-form {
+        p {
+            margin: 1rem 0;
+        }
+
+        input[type="text"],
+        input[type="email"]{
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 1rem;
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            border: 0;
+            border-radius: 2rem;
+            box-shadow: 0 0 .5rem rgba(0,0,0,.15);
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            background: $gold;
+            color: $white;
+            font-size: map-get($font-sizes, 3);
+            text-transform: uppercase;
+        }
+
+        .wpcf7-not-valid-tip {
+            background: pink;
+            padding: .25rem .5rem;
+            font-size: .875rem;
+            display: inline-block;
+            color: #000;
+            border-radius: .25rem;
+            margin-top: .5rem;
+        }
+
+        .wpcf7-response-output {
+            background: pink;
+            padding: 1rem;
+            border: 0;
+            text-align: center;
+            border-radius: .25rem;
+        }
+    }
+}

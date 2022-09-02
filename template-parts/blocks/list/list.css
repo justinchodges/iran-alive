@@ -1,0 +1,28 @@
+.list > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.list > ul > li {
+  position: relative;
+  padding-left: 3rem;
+  margin: 0 0 1rem;
+  line-height: 1.75em;
+}
+.list > ul > li:last-child {
+  margin: 0;
+}
+.list > ul > li:before {
+  content: " ";
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  display: block;
+  width: 2rem;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/wp-content/themes/iran-alive/assets/images/icon-arrow-tan.svg);
+}
+
+/*# sourceMappingURL=list.css.map */

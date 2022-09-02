@@ -1,0 +1,21 @@
+@import './../01-settings/colors';
+@import './../01-settings/typography';
+
+.button {
+    display: block;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 2rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,.15);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    &-primary {
+        background: $gold;
+        color: $white;
+        font-size: map-get($font-sizes, 3);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,10 @@
+@import './../01-settings/typography';
+
+body,
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-sans;
+}

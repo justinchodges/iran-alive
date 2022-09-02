@@ -1,0 +1,84 @@
+@import './../01-settings/colors';
+@import './../02-tools/grid';
+
+.font {
+    &-family {
+        &-sans {
+            font-family: $font-sans;
+        }
+
+        &-serif {
+            font-family: $font-serif;
+        }
+    }
+
+    &-size {
+        @include styleAllBreakpoints() {
+            @each $key, $value in $font-sizes {
+                &-#{$key} {
+                    font-size: $value;
+                }
+            }
+        }
+    }
+}
+
+.letter-spacing {
+    @each $key, $value in $letter-spacings {
+        &-#{$key} {
+            letter-spacing: $value;
+        }
+    }
+}
+
+.line-height {
+    @each $key, $value in $line-heights {
+        &-#{$key} {
+            line-height: $value;
+        }
+    }
+}
+
+.text {
+    &-align {
+        @include styleAllBreakpoints() {
+            &-center {
+                text-align: center;
+            }
+
+            &-left {
+                text-align: left;
+            }
+
+            &-right {
+                text-align: right;
+            }
+        }
+    }
+
+    &-color {
+        @include styleAllBreakpoints() {
+            @each $key, $value in $colors {
+                &-#{$key} {
+                    color: $value;
+                }
+            }
+        }
+    }
+
+    &-decoration {
+        @include styleAllBreakpoints() {
+            &-none {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-transform {
+        @include styleAllBreakpoints() {
+            &-uppercase {
+                text-transform: uppercase;
+            }
+        }
+    }
+}

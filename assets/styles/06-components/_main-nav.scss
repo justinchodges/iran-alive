@@ -1,0 +1,66 @@
+@import './../01-settings/colors';
+@import './../01-settings/typography';
+@import './../02-tools/grid';
+
+.main-nav {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    opacity: 0;
+    transition: .2s linear;
+
+    &__link {
+        display: block;
+        padding: 1rem 0;
+        color: $white;
+        text-align: center;
+        font-size: map-get($font-sizes, 3);
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $gold;
+        }
+    }
+
+    @include styleBreakpoint('xl') {
+        display: block;
+        position: relative;
+        top: unset;
+        left: unset;
+        padding: 0;
+        opacity: 1;
+        transition: unset;
+
+        &__link {
+            padding: 0;
+        }
+    }
+}
+
+.header-dark {
+    & .main-nav {
+        &__link {
+            color: $black;
+
+            &:hover {
+                color: $gold;
+            }
+        }       
+    }
+}
+
+.nav-open {
+    .main-nav {
+        display: block;
+    }
+}
+
+.nav-visible {
+    .main-nav {
+        opacity: 1;
+    }
+}

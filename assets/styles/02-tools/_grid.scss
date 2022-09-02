@@ -1,0 +1,19 @@
+@import './../01-settings/grid';
+
+@mixin styleBreakpoint($breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+@mixin styleAllBreakpoints() {
+    @content;
+
+    @each $key, $value in $breakpoints {
+        @media (min-width: $value) {
+            &-#{$key} {
+                @content;
+            }
+        }
+    }
+}
