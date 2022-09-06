@@ -10,15 +10,7 @@ $backgroundImageMobile = get_field( 'background_image_mobile' );
 $backgroundVideo = get_field( 'background_video' );
 $anchorLink = get_field( 'anchor_link' );
 
-$template = array(
-	array('core/heading', array(
-		'level' => 1,
-		'content' => 'Title Goes Here',
-	)),
-    array( 'core/paragraph', array(
-        'content' => 'Content goes here.',
-    ) )
-);
+$template = array();
 ?>
 <div class="<?= implode( ' ', $classes ); ?>"<?= $anchor; ?>> 
     <div class="hero__background">
@@ -39,11 +31,7 @@ $template = array(
     </div>
     <div class="hero__content">
         <div class="container-xl">
-            <div class="row">
-                <div class="column-8 column-md-7">
-                   <InnerBlocks template="<?= esc_attr( wp_json_encode( $template ) ); ?>" />
-                </div>
-            </div>
+            <InnerBlocks template="<?= esc_attr( wp_json_encode( $template ) ); ?>" />
         </div>
     </div>
     <?php if ( $anchorLink ) { ?>

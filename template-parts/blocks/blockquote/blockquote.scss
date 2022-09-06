@@ -1,0 +1,46 @@
+@import './../../../assets/styles/01-settings/colors';
+@import './../../../assets/styles/01-settings/typography';
+@import './../../../assets/styles/02-tools/grid';
+
+.blockquote {
+    color: $tan;
+    font-family: $font-serif;
+    text-align: center;
+
+    &__image {
+        width: 100%;
+    }
+
+    &__quote {
+        &-icon {
+            display: block;
+            height: 32px;
+            margin: 0 auto 2rem;
+        }
+
+        & > p {
+            font-size: map-get($font-sizes, 3);
+            line-height: map-get($line-heights, 2);
+        }
+    }
+
+    &__highlight > * {
+        font-style: italic;
+        font-weight: 500;
+        line-height: map-get($line-heights, 2);
+    }
+
+    &__citation {
+        font-family: $font-sans;
+        font-size: map-get($font-sizes, 2);
+        font-weight: 500;
+        line-height: map-get($line-heights, 2);
+        text-transform: uppercase;
+    }
+
+    @include styleBreakpoint('lg') {
+        &__highlight > * {
+            font-size: map-get($font-sizes, 5);
+        }
+    }
+}

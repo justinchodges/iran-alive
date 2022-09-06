@@ -23,5 +23,19 @@
   z-index: 1;
   width: 100%;
 }
+.section__side-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: unset;
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.section__side-image--right {
+  left: unset;
+  right: 0;
+}
 
 /*# sourceMappingURL=section.css.map */

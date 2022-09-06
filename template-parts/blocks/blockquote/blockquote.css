@@ -1,0 +1,36 @@
+.blockquote {
+  color: #8A6F4F;
+  font-family: "Crimson Text", Times New Roman, serif;
+  text-align: center;
+}
+.blockquote__image {
+  width: 100%;
+}
+.blockquote__quote-icon {
+  display: block;
+  height: 32px;
+  margin: 0 auto 2rem;
+}
+.blockquote__quote > p {
+  font-size: 20px;
+  line-height: 1.25em;
+}
+.blockquote__highlight > * {
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.25em;
+}
+.blockquote__citation {
+  font-family: "Metropolis", Gotham, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25em;
+  text-transform: uppercase;
+}
+@media (min-width: 62.5rem) {
+  .blockquote__highlight > * {
+    font-size: 32px;
+  }
+}
+
+/*# sourceMappingURL=blockquote.css.map */

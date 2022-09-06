@@ -1,5 +1,9 @@
 @import './../01-settings/typography';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 body * {
     box-sizing: border-box;

@@ -23,6 +23,10 @@ Version: 1.0
 /**
  * 03-GENERIC
  */
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 body * {
   box-sizing: border-box;
@@ -445,6 +449,7 @@ p {
   border-radius: 2rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  font-family: "Metropolis", Gotham, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
 }
@@ -597,6 +602,59 @@ p {
   font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal.is-open {
+  display: flex;
+}
+.modal__container {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  width: 32.5rem;
+  max-width: 100%;
+  max-height: 100vh;
+}
+.modal__header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+.modal__close {
+  color: #FFFFFF;
+  background: #000000;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.modal__content {
+  max-height: calc(100vh - 6rem);
+  overflow: auto;
+}
+
+.modal-is-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /**

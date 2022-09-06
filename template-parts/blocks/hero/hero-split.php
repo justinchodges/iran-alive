@@ -1,5 +1,5 @@
 <?php
-$classes = ['hero'];
+$classes = ['hero', 'hero-split'];
 $anchor = '';
 
 if( !empty( $block['className'] ) ) $classes = array_merge( $classes, explode( ' ', $block['className'] ) );
@@ -9,16 +9,9 @@ $backgroundImage = get_field( 'background_image' );
 $backgroundImageMobile = get_field( 'background_image_mobile' );
 $backgroundVideo = get_field( 'background_video' );
 $anchorLink = get_field( 'anchor_link' );
+$sideImage = get_field( 'side_image' );
 
-$template = array(
-	array('core/heading', array(
-		'level' => 1,
-		'content' => 'Title Goes Here',
-	)),
-    array( 'core/paragraph', array(
-        'content' => 'Content goes here.',
-    ) )
-);
+$template = array();
 ?>
 <div class="<?= implode( ' ', $classes ); ?>"<?= $anchor; ?>> 
     <div class="hero__background">
@@ -36,12 +29,13 @@ $template = array(
                 <img class="hero__background-image<?= $backgroundImageMobile ? " d-md-none" : ""; ?>" src="<?= $backgroundImageMobile['url']; ?>" alt="<?= $backgroundImageMobile['alt']; ?>" srcset="<?= get_image_srcset( $backgroundImageMobile ); ?>" />
             <?php } ?>
         <?php } ?>
+        <img class="hero__background-split" src="<?= $sideImage['url']; ?>" alt="<?= $sideImage['alt']; ?>" />
     </div>
     <div class="hero__content">
         <div class="container-xl">
             <div class="row">
-                <div class="column-8 column-md-7">
-                   <InnerBlocks template="<?= esc_attr( wp_json_encode( $template ) ); ?>" />
+                <div class="column-12 column-md-7">
+                    <InnerBlocks template="<?= esc_attr( wp_json_encode( $template ) ); ?>" />
                 </div>
             </div>
         </div>

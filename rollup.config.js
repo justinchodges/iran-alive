@@ -15,5 +15,31 @@ export default [
             }),
             commonjs()
         ]
+    },
+    {
+        input: './assets/javascripts/src/donate-form.js',
+        output: {
+            file: './assets/javascripts/dist/donate-form.js',
+            format: 'iife'
+        },
+        plugins: [
+            babel({
+                presets: ['@babel/preset-env']
+            }),
+            commonjs()
+        ]
+    },
+    {
+        input: './assets/javascripts/src/statistic.js',
+        output: {
+            file: './assets/javascripts/dist/statistic.js',
+            format: 'iife'
+        },
+        plugins: [
+            babel({
+                presets: ['@babel/preset-env']
+            }),
+            commonjs()
+        ]
     }
 ];

@@ -69,6 +69,9 @@
                 </div>
             </div>
         </div>
+        <div class="modals">
+            <?php get_modals(); ?>
+        </div>
         <?php wp_footer(); ?>
     </body>
 </html>
