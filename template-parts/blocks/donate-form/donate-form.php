@@ -1,10 +1,6 @@
 <?php 
 $formId = get_field( 'form_id' ); 
-add_modal($formId, <<<EOD
-<div id="FkhAzHcKBz">
-    <script type="text/javascript" src="https://default.salsalabs.org/api/widget/template/9d40cc74-69c0-4cae-b1dd-865122e92256/?tId={$formId}" ></script>
-</div>
-EOD);
+add_modal($formId, '<div id="FkhAzHcKBz"><script type="text/javascript" src="https://default.salsalabs.org/api/widget/template/9d40cc74-69c0-4cae-b1dd-865122e92256/?tId=' . $formId . '" ></script></div>');
 ?>
 <div class="donate-form is-one-time" data-form-id="<?= $formId; ?>">
     <div class="donate-form__controller">

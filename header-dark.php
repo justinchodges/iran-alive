@@ -18,16 +18,16 @@
                             <nav class="main-nav">
                                 <div class="d-lg-flex g-lg-3 align-items-center">
                                     <div class="main-nav__item column-none">
-                                        <a class="main-nav__link" href="/stories/">Stories</a>
+                                        <a class="main-nav__link" href="/stories">Stories</a>
                                     </div>
                                     <div class="main-nav__item column-none">
-                                        <a class="main-nav__link" href="/prayer/">Prayer</a>
+                                        <a class="main-nav__link" href="/prayer">Prayer</a>
                                     </div>
                                     <div class="main-nav__item column-none">
-                                        <a class="main-nav__link" href="/about/">About</a>
+                                        <a class="main-nav__link" href="/about">About</a>
                                     </div>
                                     <div class="main-nav__item column-none">
-                                        <a class="button button-primary" href="#">Donate</a>
+                                        <a class="button button-primary" href="/donate">Donate</a>
                                     </div>
                                 </div>
                             </nav>

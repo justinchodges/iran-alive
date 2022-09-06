@@ -23,6 +23,8 @@ function get_image_srcset( $image )
         }
     }
 
+    $sizes[] = $image['url'] . ' 1600w';
+
     return implode( ',', $sizes );
 }
 
