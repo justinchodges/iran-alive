@@ -7,6 +7,9 @@
   min-height: calc(100vh - 8rem);
   padding: 5.5rem 0;
 }
+.hero-split {
+  padding: 5.5rem 0;
+}
 .hero__background {
   position: absolute;
   top: 0;
@@ -32,8 +35,8 @@
   right: 0;
   height: 90%;
   width: 40%;
-  object-fit: contain;
-  object-position: bottom right;
+  object-fit: cover;
+  object-position: top right;
 }
 .hero__content {
   position: relative;
@@ -60,13 +63,29 @@
 .hero__anchor:hover {
   animation: none;
 }
+.hero__split-mobile {
+  display: block;
+  margin: 2rem auto 0;
+  max-width: 75%;
+}
+@media (min-width: 45.5rem) {
+  .hero__background-split {
+    display: block;
+  }
+  .hero-split {
+    padding: 8.5rem 0 0;
+  }
+  .hero__split-mobile {
+    display: none;
+  }
+}
 @media (min-width: 62.5rem) {
   .hero {
     min-height: 100vh;
     padding: 8.5rem 0;
   }
-  .hero__background-split {
-    display: block;
+  .hero-split {
+    padding: 8.5rem 0 0;
   }
   .hero__title {
     font-size: 64px;

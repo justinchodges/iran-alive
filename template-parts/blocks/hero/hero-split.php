@@ -36,6 +36,7 @@ $template = array();
             <div class="row">
                 <div class="column-12 column-md-7">
                     <InnerBlocks template="<?= esc_attr( wp_json_encode( $template ) ); ?>" />
+                    <img class="hero__split-mobile" src="<?= $sideImage['url']; ?>" alt="<?= $sideImage['alt']; ?>" />
                 </div>
             </div>
         </div>

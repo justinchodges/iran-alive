@@ -10,6 +10,10 @@
     min-height: calc(100vh - 8rem);
     padding: 5.5rem 0;
 
+    &-split {
+        padding: 5.5rem 0;
+    }
+
     &__background {
         position: absolute;
         top: 0;
@@ -37,8 +41,8 @@
             right: 0;
             height: 90%;
             width: 40%;
-            object-fit: contain;
-            object-position: bottom right;
+            object-fit: cover;
+            object-position: top right;
         }
     }
 
@@ -72,14 +76,34 @@
         }
     }
 
-    @include styleBreakpoint('lg') {
-        min-height: 100vh;
-        padding: 8.5rem 0;
+    &__split-mobile {
+        display: block;
+        margin: 2rem auto 0;
+        max-width: 75%;
+    }
 
+    @include styleBreakpoint('md') {
         &__background {
             &-split {
                 display: block;
             }
+        }
+
+        &-split {
+            padding: 8.5rem 0 0;
+        }
+
+        &__split-mobile {
+            display: none;
+        }
+    }
+
+    @include styleBreakpoint('lg') {
+        min-height: 100vh;
+        padding: 8.5rem 0;
+
+        &-split {
+            padding: 8.5rem 0 0;
         }
 
         &__title {

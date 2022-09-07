@@ -1,3 +1,5 @@
+@import './../../../assets/styles/01-settings/colors';
+
 .list {
     & > ul {
         padding: 0;
@@ -25,6 +27,21 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-image: url(/wp-content/themes/iran-alive/assets/images/icon-arrow-tan.svg);
+            }
+        }
+    }
+}
+
+.list {
+    & > ul.has-white-color,
+    & > ul.text-white {
+        & > li {
+            &:before {
+                background-image: url(/wp-content/themes/iran-alive/assets/images/icon-arrow-right-gold.svg);
+            }
+
+            & a {
+                color: $gold;
             }
         }
     }

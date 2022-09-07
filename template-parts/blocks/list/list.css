@@ -25,4 +25,11 @@
   background-image: url(/wp-content/themes/iran-alive/assets/images/icon-arrow-tan.svg);
 }
 
+.list > ul.has-white-color > li:before, .list > ul.text-white > li:before {
+  background-image: url(/wp-content/themes/iran-alive/assets/images/icon-arrow-right-gold.svg);
+}
+.list > ul.has-white-color > li a, .list > ul.text-white > li a {
+  color: #CDB52C;
+}
+
 /*# sourceMappingURL=list.css.map */
