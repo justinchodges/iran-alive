@@ -54,7 +54,7 @@ $template = array(
     <div class="section__content container-lg">
         <div class="row<?= $sideImagePosition === 'left' ? ' justify-content-end' : ''; ?>">
             <div class="column-12 column-md-7">
-                <img class="d-md-none m-b-3" src="<?= $sideImage['url']; ?>" alt="<?= $sideImage['alt']; ?>" srcset="<?= get_image_srcset( $sideImage ); ?>" />
+                <img class="d-md-none m-b-3" src="<?= $sideImage['url']; ?>" alt="<?= $sideImage['alt']; ?>" srcset="<?= get_image_srcset( $sideImage ); ?>" style="width:100%;" />
                 <InnerBlocks template="<?= esc_attr( wp_json_encode( $template ) ); ?>" />
             </div>
         </div>
