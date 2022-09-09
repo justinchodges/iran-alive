@@ -27,6 +27,8 @@
 .nav-open {
     & .hamburger {
         &__bar {
+            background: $black;
+
             &:nth-child(1) {
                 top: 9px;
                 transform: rotate(45deg);
