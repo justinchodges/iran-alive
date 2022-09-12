@@ -137,7 +137,7 @@ img {
 input[type=text],
 input[type=email],
 input[type=number] {
-  font-size: 100% !important;
+  font-size: 1rem !important;
 }
 
 /**
@@ -738,18 +738,25 @@ input[type=number] {
   display: flex;
 }
 .modal__container {
+  position: relative;
   background: #FFFFFF;
-  padding: 1rem;
   border-radius: 0.25rem;
   width: 32.5rem;
   max-width: 100%;
-  max-height: calc(100% - 2rem);
+  max-height: 100%;
   overflow: auto;
 }
 .modal__header {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #FFFFFF;
+  z-index: 2;
+  padding: 0.5rem;
+  border-bottom: 1px dashed #ccc;
 }
 .modal__close {
   color: #FFFFFF;
@@ -763,8 +770,9 @@ input[type=number] {
   cursor: pointer;
 }
 .modal__content {
-  max-height: calc(100vh - 6rem);
-  overflow: auto;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem 1rem;
 }
 
 .modal-is-open {

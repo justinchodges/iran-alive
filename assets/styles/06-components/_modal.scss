@@ -17,19 +17,26 @@
     }
 
     &__container {
+        position: relative;
         background: $white;
-        padding: 1rem;
         border-radius: .25rem;
         width: 32.5rem;
         max-width: 100%;
-        max-height: calc(100% - 2rem);
+        max-height: 100%;
         overflow: auto;
     }
 
     &__header {
         display: flex;
         justify-content: flex-end;
-        margin-bottom: 2rem;
+        position: sticky;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background: $white;
+        z-index: 2;
+        padding: 0.5rem;
+        border-bottom: 1px dashed #ccc;
     }
 
     &__close {
@@ -45,8 +52,9 @@
     }
 
     &__content {
-        max-height: calc(100vh - 6rem);
-        overflow: auto;
+        position: relative;
+        z-index: 1;
+        padding: 0 1rem 1rem;
     }
 }
 
