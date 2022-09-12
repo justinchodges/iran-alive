@@ -19,7 +19,7 @@
         }
     }
 
-    @include styleBreakpoint('lg') {
+    @include styleBreakpoint('xl') {
         display: none;
     }
 }

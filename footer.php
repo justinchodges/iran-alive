@@ -23,41 +23,38 @@
                                 <div class="column-12 column-lg-6 order-1 order-lg-0 m-y-2">
                                     <nav class="footer-nav">
                                         <div class="footer-nav__item">
-                                            <a class="footer-nav__link" href="#">Stories</a>
+                                            <a class="footer-nav__link" href="/about">About</a>
                                         </div>
                                         <div class="footer-nav__item">
-                                            <a class="footer-nav__link" href="#">Prayer</a>
+                                            <a class="footer-nav__link" href="/donate-monthly">Ambassadors</a>
                                         </div>
                                         <div class="footer-nav__item">
-                                            <a class="footer-nav__link" href="#">About</a>
-                                        </div>
-                                        <div class="footer-nav__item">
-                                            <a class="footer-nav__link text-color-gold" href="#">Donate</a>
+                                            <a class="footer-nav__link text-color-gold" href="/donate">Give</a>
                                         </div>
                                     </nav>
                                 </div>
                                 <div class="column-12 column-lg-6 text-align-center order-0 order-lg-1 m-y-2">
-                                    <a href="#" title="link to ECFA's report on Iran Alive">
+                                    <a href="https://www.ecfa.org/" title="link to ECFA's report on Iran Alive">
                                         <img src="/wp-content/themes/iran-alive/assets/images/ecfa.png" alt="Evangelical Council for Financial Accountability" />
                                     </a>
                                     <div class="row justify-content-center align-items-center m-t-2">
                                         <div class="column-none">
-                                            <a href="#" title="Link to Iran Alive's YouTube channel">
+                                            <a href="https://www.youtube.com/channel/UCdmVApwZRLBWa4Wm9o-MoIQ" title="Link to Iran Alive's YouTube channel">
                                                 <img src="/wp-content/themes/iran-alive/assets/images/youtube.png" alt="YouTube" />
                                             </a>
                                         </div>
                                         <div class="column-none">
-                                            <a href="#" title="Link to Iran Alive's Instagram">
+                                            <a href="https://www.instagram.com/iran.alive.ministries/" title="Link to Iran Alive's Instagram">
                                                 <img src="/wp-content/themes/iran-alive/assets/images/instagram.png" alt="Instagram" />
                                             </a>
                                         </div>
                                         <div class="column-none">
-                                            <a href="#" title="Link to Iran Alive's Facebook page">
+                                            <a href="https://www.facebook.com/IranAliveMinistries" title="Link to Iran Alive's Facebook page">
                                                 <img src="/wp-content/themes/iran-alive/assets/images/facebook.png" alt="Facebook" />
                                             </a>
                                         </div>
                                         <div class="column-none">
-                                            <a href="#" title="Link to Iran Alive's Twitter">
+                                            <a href="https://twitter.com/HormozShariat" title="Link to Iran Alive's Twitter">
                                                 <img src="/wp-content/themes/iran-alive/assets/images/twitter.png" alt="Twitter" />
                                             </a>
                                         </div>

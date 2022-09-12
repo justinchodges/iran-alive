@@ -15,7 +15,7 @@ function get_nav() {
     $items = wp_get_nav_menu_items( 'Primary Menu' );
 ?>
     <nav class="main-nav">
-        <div class="d-lg-flex g-lg-3 align-items-center">
+        <div class="d-xl-flex g-lg-3 align-items-center">
             <?php 
             foreach ( $items as $item ) { 
                 if ( $item->menu_item_parent === "0" ) {
@@ -30,9 +30,6 @@ function get_nav() {
                     <div class="main-nav__item column-none<?= count( $children ) > 0 ? " has-children" : ""; ?>">
                         <a class="<?= $item->title === "Give" ? "button button-primary" : "main-nav__link"; ?>" href="<?= $item->url; ?>"><?= $item->title; ?></a>
                         <?php if ( count( $children ) > 0 ) { ?>
-                            <button class="main-nav__children-toggle">
-                                <img src="<?= get_template_directory_uri(); ?>/assets/images/icon-arrow-gold.svg" alt="" />
-                            </button>
                             <div class="main-nav__children">
                                 <?php foreach ( $children as $child ) { ?>
                                     <div class="main-nav__child">

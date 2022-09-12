@@ -13,12 +13,12 @@
     &__logo {
         height: 64px;
         
-        @include styleBreakpoint('lg') {
+        @include styleBreakpoint('xl') {
             height: 112px;
         }
     }
 
-    @media (max-width: calc(map-get($breakpoints, 'lg') - 1px)) {
+    @media (max-width: calc(map-get($breakpoints, 'xl') - 1px)) {
         &.nav-open {
             position: fixed;
             top: 0;
@@ -29,7 +29,7 @@
         }
     }
 
-    @include styleBreakpoint('lg') {
+    @include styleBreakpoint('xl') {
         padding: 2rem 0;
     }
 }

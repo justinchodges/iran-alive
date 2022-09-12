@@ -19,10 +19,6 @@
         align-items: center;
         justify-content: center;
         position: relative;
-
-        &.has-children {
-            padding-left: 1.75rem;
-        }
     }
 
     &__link {
@@ -41,8 +37,6 @@
     }
 
     &__children {
-        display: none;
-
         &-toggle {
             width: 1.5rem;
             height: 1rem;
@@ -68,7 +62,7 @@
         }
     }
 
-    @media (max-width: calc(map-get($breakpoints, 'lg') - 1px)) {
+    @media (max-width: calc(map-get($breakpoints, 'xl') - 1px)) {
         &__item {
             padding-left: inherit;
     
@@ -85,7 +79,6 @@
 
         &__children {
             width: 100%;
-            margin-left: -1.75rem;
         }
 
         &__child {
@@ -121,6 +114,7 @@
         }
 
         &__children {
+            display: none;
             position: absolute;
             top: 100%;
             right: 0;
@@ -188,7 +182,7 @@
     }
 }
 
-@media (max-width: calc(map-get($breakpoints, 'lg') - 1px)) {
+@media (max-width: calc(map-get($breakpoints, 'xl') - 1px)) {
     .nav-open {
         .main-nav {
             display: block;

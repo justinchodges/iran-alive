@@ -1,6 +1,5 @@
 const Header = (element) => {
     const hamburger = element.querySelector('.hamburger');
-    const navChildrenToggles = element.querySelectorAll('.main-nav__children-toggle');
 
     hamburger.addEventListener('click', (e) => {
         e.preventDefault();
@@ -15,20 +14,6 @@ const Header = (element) => {
                 element.classList.add('nav-visible');
             }, 1);
         }
-    });
-
-    navChildrenToggles.forEach((toggle) => {
-        toggle.addEventListener('click', (e) => {
-            e.preventDefault();
-
-            const parent = toggle.parentNode;
-            
-            if (parent.classList.contains('is-open')) {
-                parent.classList.remove('is-open');
-            } else {
-                parent.classList.add('is-open');
-            }
-        });
     });
 };
 

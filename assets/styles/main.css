@@ -494,12 +494,12 @@ input[type=number] {
 .header__logo {
   height: 64px;
 }
-@media (min-width: 62.5rem) {
+@media (min-width: 80rem) {
   .header__logo {
     height: 112px;
   }
 }
-@media (max-width: calc(62.5rem - 1px)) {
+@media (max-width: calc(80rem - 1px)) {
   .header.nav-open {
     position: fixed;
     top: 0;
@@ -509,7 +509,7 @@ input[type=number] {
     background: #FFFFFF;
   }
 }
-@media (min-width: 62.5rem) {
+@media (min-width: 80rem) {
   .header {
     padding: 2rem 0;
   }
@@ -532,9 +532,6 @@ input[type=number] {
   justify-content: center;
   position: relative;
 }
-.main-nav__item.has-children {
-  padding-left: 1.75rem;
-}
 .main-nav__link {
   position: relative;
   display: block;
@@ -547,9 +544,6 @@ input[type=number] {
 }
 .main-nav__link:hover {
   color: #CDB52C;
-}
-.main-nav__children {
-  display: none;
 }
 .main-nav__children-toggle {
   width: 1.5rem;
@@ -571,7 +565,7 @@ input[type=number] {
 .main-nav__child-link:hover {
   color: #CDB52C;
 }
-@media (max-width: calc(62.5rem - 1px)) {
+@media (max-width: calc(80rem - 1px)) {
   .main-nav__item {
     padding-left: inherit;
   }
@@ -583,7 +577,6 @@ input[type=number] {
   }
   .main-nav__children {
     width: 100%;
-    margin-left: -1.75rem;
   }
   .main-nav__child {
     text-align: center;
@@ -614,6 +607,7 @@ input[type=number] {
     color: #FFFFFF;
   }
   .main-nav__children {
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
@@ -661,7 +655,7 @@ input[type=number] {
   color: #CDB52C;
 }
 
-@media (max-width: calc(62.5rem - 1px)) {
+@media (max-width: calc(80rem - 1px)) {
   .nav-open .main-nav {
     display: block;
   }
@@ -686,7 +680,7 @@ input[type=number] {
 .hamburger__bar:nth-child(2) {
   margin: 6px 0;
 }
-@media (min-width: 62.5rem) {
+@media (min-width: 80rem) {
   .hamburger {
     display: none;
   }
