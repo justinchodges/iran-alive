@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title><?php the_title(); ?></title>
         <?php wp_head(); ?>
     </head>
     <body>
@@ -15,27 +16,7 @@
                             </a>
                         </div>
                         <div class="column-none justify-self-end">
-                            <nav class="main-nav">
-                                <div class="d-lg-flex g-lg-3 align-items-center">
-                                    <div class="main-nav__item column-none">
-                                        <a class="main-nav__link" href="/stories">Stories</a>
-                                    </div>
-                                    <div class="main-nav__item column-none">
-                                        <a class="main-nav__link" href="/prayer">Prayer</a>
-                                    </div>
-                                    <div class="main-nav__item column-none">
-                                        <a class="main-nav__link" href="/about">About</a>
-                                    </div>
-                                    <div class="main-nav__item column-none">
-                                        <a class="button button-primary" href="/donate">Donate</a>
-                                    </div>
-                                </div>
-                            </nav>
-                            <button class="hamburger" aria-label="Open navigation">
-                                <div class="hamburger__bar"></div>
-                                <div class="hamburger__bar"></div>
-                                <div class="hamburger__bar"></div>
-                            </button>
+                            <?php get_nav(); ?>
                         </div>
                     </div>
                 </div>

@@ -24,6 +24,14 @@
     }
 }
 
+.header-dark {
+    & .hamburger {
+        &__bar {
+            background: $black;
+        }
+    }
+}
+
 .nav-open {
     & .hamburger {
         &__bar {
