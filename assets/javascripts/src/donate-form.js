@@ -67,12 +67,18 @@ import { Modal } from './../../../assets/javascripts/src/modal';
                             salsaFrequency.removeAttribute('checked');
                         }
 
-                        var evt = document.createEvent("HTMLEvents");
-                        evt.initEvent("change", false, true)
-                        salsaFrequency.dispatchEvent(evt);
+                        var event = new Event('change');
+                        salsaFrequency.dispatchEvent(event);
                     });
                 });
             });
+
+            if (salsaFrequency.checked) {
+                frequencies.forEach((frequency) => {
+                    if (frequency.value === 'Give Monthly') frequency.click();
+                    return;
+                });
+            }
 
             salsaOneTimeAmounts.forEach((oneTimeAmount) => {
                 let amount = document.createElement('button');
@@ -132,6 +138,8 @@ import { Modal } from './../../../assets/javascripts/src/modal';
                                     parent.click();
                                 } else if (amount.value === 'Other Amount') {
                                     salsaOneTimeAmountOtherCheckbox.click();
+                                    var event = new Event('blur');
+                                    salsaOneTimeAmountOtherCheckbox.dispatchEvent(event);
                                 }
                             });
 
@@ -153,6 +161,9 @@ import { Modal } from './../../../assets/javascripts/src/modal';
 
             oneTimeOther.addEventListener('keyup', () => {
                 salsaOneTimeAmountOtherCheckbox.value = oneTimeOther.value;
+
+                var event = new Event('blur');
+                salsaOneTimeAmountOtherCheckbox.dispatchEvent(event);
             });
 
             const monthlyAmounts = element.querySelectorAll('.donate-form__card-amounts--monthly .donate-form__card-amount');
@@ -171,6 +182,8 @@ import { Modal } from './../../../assets/javascripts/src/modal';
                                     parent.click();
                                 } else if (amount.value === 'Other Amount') {
                                     salsaMonthlyAmountOtherCheckbox.click();
+                                    var event = new Event('blur');
+                                    salsaMonthlyAmountOtherCheckbox.dispatchEvent(event);
                                 }
                             });
 
@@ -191,7 +204,10 @@ import { Modal } from './../../../assets/javascripts/src/modal';
             });
 
             monthlyOther.addEventListener('keyup', () => {
-                salsaMonthlyAmountOtherCheckbox.value = oneTimeOther.value;
+                salsaMonthlyAmountOtherCheckbox.value = monthlyOther.value;
+
+                var event = new Event('blur');
+                salsaMonthlyAmountOtherCheckbox.dispatchEvent(event);
             });
         };
 

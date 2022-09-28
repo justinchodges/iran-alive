@@ -103,12 +103,19 @@
                   salsaFrequency.removeAttribute('checked');
                 }
 
-                var evt = document.createEvent("HTMLEvents");
-                evt.initEvent("change", false, true);
-                salsaFrequency.dispatchEvent(evt);
+                var event = new Event('change');
+                salsaFrequency.dispatchEvent(event);
               });
             });
           });
+
+          if (salsaFrequency.checked) {
+            frequencies.forEach(function (frequency) {
+              if (frequency.value === 'Give Monthly') frequency.click();
+              return;
+            });
+          }
+
           salsaOneTimeAmounts.forEach(function (oneTimeAmount) {
             var amount = document.createElement('button');
             amount.classList.add('donate-form__card-amount');
@@ -152,6 +159,8 @@
                       parent.click();
                     } else if (amount.value === 'Other Amount') {
                       salsaOneTimeAmountOtherCheckbox.click();
+                      var event = new Event('blur');
+                      salsaOneTimeAmountOtherCheckbox.dispatchEvent(event);
                     }
                   });
                   amount.setAttribute('selected', 'selected');
@@ -169,6 +178,8 @@
           });
           oneTimeOther.addEventListener('keyup', function () {
             salsaOneTimeAmountOtherCheckbox.value = oneTimeOther.value;
+            var event = new Event('blur');
+            salsaOneTimeAmountOtherCheckbox.dispatchEvent(event);
           });
           var monthlyAmounts = element.querySelectorAll('.donate-form__card-amounts--monthly .donate-form__card-amount');
           var monthlyOther = element.querySelector('.donate-form__card-amounts--monthly .donate-form__card-amount-other-input');
@@ -183,6 +194,8 @@
                       parent.click();
                     } else if (amount.value === 'Other Amount') {
                       salsaMonthlyAmountOtherCheckbox.click();
+                      var event = new Event('blur');
+                      salsaMonthlyAmountOtherCheckbox.dispatchEvent(event);
                     }
                   });
                   amount.setAttribute('selected', 'selected');
@@ -199,7 +212,9 @@
             }
           });
           monthlyOther.addEventListener('keyup', function () {
-            salsaMonthlyAmountOtherCheckbox.value = oneTimeOther.value;
+            salsaMonthlyAmountOtherCheckbox.value = monthlyOther.value;
+            var event = new Event('blur');
+            salsaMonthlyAmountOtherCheckbox.dispatchEvent(event);
           });
         };
 
