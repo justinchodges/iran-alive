@@ -1,4 +1,8 @@
 <?php
+global $theme_version;
+
+wp_enqueue_style( 'blockquote-css', get_template_directory_uri() . '/template-parts/blocks/blockquote/blockquote.css', null, $theme_version );
+
 $image = get_field( 'image' );
 $highlight = get_field( 'highlight' );
 $quote = get_field( 'quote' );

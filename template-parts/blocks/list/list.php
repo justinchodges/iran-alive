@@ -1,4 +1,8 @@
 <?php
+global $theme_version;
+
+wp_enqueue_style( 'list-css', get_template_directory_uri() . '/template-parts/blocks/list/list.css', null, $theme_version );
+
 $classes = ['list'];
 $anchor = '';
 

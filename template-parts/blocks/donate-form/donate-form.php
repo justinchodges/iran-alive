@@ -1,6 +1,13 @@
 <?php 
-$formId = get_field( 'form_id' ); 
-add_modal($formId, '<div id="FkhAzHcKBz"><script type="text/javascript" src="https://default.salsalabs.org/api/widget/template/9d40cc74-69c0-4cae-b1dd-865122e92256/?tId=' . $formId . '" ></script></div>');
+global $theme_version;
+
+wp_enqueue_style( 'iran-alive-donate-form-css', get_template_directory_uri() . '/template-parts/blocks/donate-form/donate-form.css', null, $theme_version );
+wp_enqueue_script( 'iran-alive-donate-form-js', get_template_directory_uri() . '/assets/javascripts/dist/donate-form.js', null, $theme_version, true );
+
+$formId = get_field( 'form_id' );
+$formTemplate = get_field( 'form_template' );
+
+add_modal($formId, $formTemplate);
 ?>
 <div class="donate-form is-one-time" data-form-id="<?= $formId; ?>">
     <div class="donate-form__controller">

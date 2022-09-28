@@ -1,4 +1,9 @@
 <?php
+$theme = wp_get_theme();
+
+global $theme_version;
+$theme_version = $theme->get('Version');
+
 add_theme_support( 'menus' );
 
 add_action( 'after_setup_theme', 'register_primary_menu' );
@@ -7,8 +12,8 @@ function register_primary_menu() {
 	register_nav_menu( 'primary', __( 'Primary Menu', 'iran-alive' ) );
 }
 
-wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/assets/styles/main.css' );
-wp_enqueue_script( 'header-script', get_template_directory_uri() . '/assets/javascripts/dist/header.js', null, null, true );
+wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/assets/styles/main.css', null, $theme_version );
+wp_enqueue_script( 'header-script', get_template_directory_uri() . '/assets/javascripts/dist/header.js', null, $theme_version, true );
 
 
 function get_nav() {

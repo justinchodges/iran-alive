@@ -9,7 +9,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/blockquote/blockquote.php',
             'category'          => 'layout',
             'keywords'          => array( 'section' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/blockquote/blockquote.css',
             'supports'		    => [
                 'align'			    => true,
                 'anchor'		    => true,
@@ -26,7 +25,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/card/card.php',
             'category'          => 'layout',
             'keywords'          => array( 'section' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/card/card.css',
             'supports'		    => [
                 'align'			    => true,
                 'anchor'		    => true,
@@ -42,9 +40,7 @@ function iranalive_blocktypes() {
             'description'       => __( 'A donate form block', 'iran-alive' ),
             'render_template'   => 'template-parts/blocks/donate-form/donate-form.php',
             'category'          => 'layout',
-            'keywords'          => array( 'section' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/donate-form/donate-form.css',
-            'enqueue_script'     => get_template_directory_uri() . '/assets/javascripts/dist/donate-form.js'
+            'keywords'          => array( 'section' )
         ) );
 
         // DONATION TIERS
@@ -54,8 +50,7 @@ function iranalive_blocktypes() {
             'description'       => __( 'A donation tier block', 'iran-alive' ),
             'render_template'   => 'template-parts/blocks/donation-tiers/donation-tiers.php',
             'category'          => 'layout',
-            'keywords'          => array( 'section' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/donation-tiers/donation-tiers.css',
+            'keywords'          => array( 'section' )
         ) );
 
         // HERO
@@ -66,7 +61,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/hero/hero.php',
             'category'          => 'layout',
             'keywords'          => array( 'hero', 'featured' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/hero/hero.css',
             'supports'		    => [
                 'align'			    => true,
                 'anchor'		    => true,
@@ -83,7 +77,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/hero/hero-full.php',
             'category'          => 'layout',
             'keywords'          => array( 'hero', 'featured' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/hero/hero.css',
             'supports'		    => [
                 'align'			    => true,
                 'anchor'		    => true,
@@ -100,7 +93,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/hero/hero-split.php',
             'category'          => 'layout',
             'keywords'          => array( 'hero', 'featured' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/hero/hero.css',
             'supports'		    => [
                 'align'			    => true,
                 'anchor'		    => true,
@@ -117,7 +109,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/list/list.php',
             'category'          => 'layout',
             'keywords'          => array( 'list', 'featured' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/list/list.css',
             'supports'		    => [
                 'align'			    => true,
                 'anchor'		    => true,
@@ -134,7 +125,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/section/section.php',
             'category'          => 'layout',
             'keywords'          => array( 'section' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/section/section.css',
             'supports'		    => [
                 'align'			    => true,
                 'anchor'		    => true,
@@ -151,7 +141,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/side-image/side-image.php',
             'category'          => 'layout',
             'keywords'          => array( 'section' ),
-            'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/section/section.css',
             'supports'		    => [
                 'align'			    => true,
                 'anchor'		    => true,
@@ -167,8 +156,7 @@ function iranalive_blocktypes() {
             'description'       => __( 'A statistic block', 'iran-alive' ),
             'render_template'   => 'template-parts/blocks/statistic/statistic.php',
             'category'          => 'layout',
-            'keywords'          => array( 'statistic' ),
-            'enqueue_script'     => get_template_directory_uri() . '/assets/javascripts/dist/statistic.js'
+            'keywords'          => array( 'statistic' )
         ) );
     }
 }

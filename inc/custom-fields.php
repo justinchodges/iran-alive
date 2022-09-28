@@ -130,6 +130,25 @@ acf_add_local_field_group(array(
 			'append' => '',
 			'maxlength' => '',
 		),
+		array(
+			'key' => 'field_633398072000e',
+			'label' => 'Form Template',
+			'name' => 'form_template',
+			'type' => 'textarea',
+			'instructions' => '(HTML)',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
 	),
 	'location' => array(
 		array(

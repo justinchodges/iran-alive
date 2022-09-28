@@ -1,4 +1,8 @@
 <?php
+global $theme_version;
+
+wp_enqueue_script( 'statistic-js', get_template_directory_uri() . '/assets/javascripts/dist/statistic.js', null, $theme_version );
+
 $number = get_field( 'number' );
 $description = get_field( 'description' );
 ?>
