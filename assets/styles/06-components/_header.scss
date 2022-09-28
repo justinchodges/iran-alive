@@ -30,14 +30,14 @@
     }
 
     & ~ .page > *:first-child:not(.hero) {
-        padding-top: 5rem;
+        padding-top: 5.5rem;
     }
 
     @include styleBreakpoint('xl') {
         padding: 2rem 0;
 
         & ~ .page > *:first-child:not(.hero) {
-            padding-top: 8rem;
+            padding-top: 8.5rem;
         }
     }
 }
