@@ -29,7 +29,15 @@
         }
     }
 
+    & ~ .page > *:first-child:not(.hero) {
+        padding-top: 5rem;
+    }
+
     @include styleBreakpoint('xl') {
         padding: 2rem 0;
+
+        & ~ .page > *:first-child:not(.hero) {
+            padding-top: 8rem;
+        }
     }
 }
