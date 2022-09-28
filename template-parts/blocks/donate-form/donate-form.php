@@ -1,7 +1,6 @@
 <?php 
 global $theme_version;
 
-wp_enqueue_style( 'iran-alive-donate-form-css', get_template_directory_uri() . '/template-parts/blocks/donate-form/donate-form.css', null, $theme_version );
 wp_enqueue_script( 'iran-alive-donate-form-js', get_template_directory_uri() . '/assets/javascripts/dist/donate-form.js', null, $theme_version, true );
 
 $formId = get_field( 'form_id' );

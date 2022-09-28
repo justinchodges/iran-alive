@@ -1,8 +1,4 @@
 <?php
-global $theme_version;
-
-wp_enqueue_style( 'card-css', get_template_directory_uri() . '/template-parts/blocks/card/card.css', null, $theme_version );
-
 $classes = array( 'card' );
 $anchor = '';
 

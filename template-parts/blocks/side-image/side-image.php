@@ -1,8 +1,4 @@
 <?php
-global $theme_version;
-
-wp_enqueue_style( 'section-css', get_template_directory_uri() . '/template-parts/blocks/section/section.css', null, $theme_version );
-
 $classes = ['section'];
 $anchor = '';
 
