@@ -2,6 +2,25 @@
 
 This theme was created for IranAlive.org.
 
+- [Theme Settings](#theme-settings)
+  - [Colors](#colors)
+  - [Typography](#typography)
+  - [Font Sizes](#font-sizes)
+- [Page Templates](#page-templates)
+  - [Default Template](#default-template);
+  - [Header Dark](#header-dark)
+  - [No Nav](#no-nav);
+- [Theme Blocks](#theme-blocks);
+  - [Blockquote](#blockquote);
+  - [Card](#card);
+  - [Donate Form](#donate-form);
+  - [Donation Tiers](#donation-tiers);
+  - [Hero](#hero)
+  - [List](#list)
+  - [Section](#section)
+  - [Side Image](#side-image)
+  - [Statistic](#statistic)
+
 ## Theme Settings
 
 ### Colors
@@ -31,7 +50,7 @@ This theme was created for IranAlive.org.
 
 ## Page Templates
 
-### Default
+### Default Template
 
 - The default template will include a header that has light text
 - This should be used when first section has a dark background.
@@ -40,6 +59,10 @@ This theme was created for IranAlive.org.
 
 - This template will include a header that has dark text
 - This should be used when the first section has a light background.
+
+### No Nav
+
+- This template will include a header without navigation.
 
 ## Theme Blocks
 
@@ -56,11 +79,15 @@ This block is used to show a quote with attribution and even an image, if necess
 | Quote       | The rest of the quote                 |
 | Citation    | Who to attribute the quote to         |
 
+---
+
 ### Card
 
 This block is used to display information in a card-like fashion with image, title and summary.
 
 ![Card example](assets/documentation/card.png)
+
+---
 
 ### Donate Form
 
@@ -71,7 +98,9 @@ This block populates a donate form from Salsa Labs.
 | Option Name   | Description                                          |
 |---------------|------------------------------------------------------|
 | Form ID       | The ID of the form from Salsa Labs (ex: knlaBKTrPJ)  |
-| Form Template | The form template from Salsa Labs  (ex: ```html<div id="knlaBKTrPJ"><script type="text/javascript" src="https://default.salsalabs.org/api/widget/template/38cc5fcd-12b4-440d-b49b-2d0f0531b35b/?tId=knlaBKTrPJ" ></script></div>```) |
+| Form Template | The form template from Salsa Labs  (ex: ```<div id="knlaBKTrPJ"><script type="text/javascript" src="https://default.salsalabs.org/api/widget/template/38cc5fcd-12b4-440d-b49b-2d0f0531b35b/?tId=knlaBKTrPJ" ></script></div>```) |
+
+---
 
 ### Donation Tiers
 
@@ -79,11 +108,13 @@ This block is used to show a range of donation opportunities and what their impa
 
 ![Donation Tiers example](assets/documentation/donation-tiers.png)
 
-| Option Name --| Description                          |
+| Option Name   | Description                          |
 |---------------|--------------------------------------|
 | Amount        | The amount of the donation tier      |
 | Description   | The description of the donation tier |
 | Content Color | The color of the text                |
+
+---
 
 ### Hero
 
@@ -98,11 +129,15 @@ This block is used as an attention grabber at the beginning of the page and show
 | Background Video        | Sets the background video of the hero                               |
 | Anchor Link             | Sets the jump/anchor link at the bottom of the hero                 |
 
+---
+
 ### List
 
 This block is used to create a stylized unordered list with arrows.
 
 ![List example](assets/documentation/list.png)]
+
+---
 
 ### Section
 
@@ -110,11 +145,13 @@ This is one of the most used blocks in this theme. This block allows you to add 
 
 ![Section example](assets/documentation/section.png)
 
-| Option Name      | Description                                    | Options                   |
-|------------------|------------------------------------------------|---------------------------|
-| Background Color | Sets the background color of the section       | [See colors](#colors)     |
-| Background Image | Sets the background image of the section       | Image files               |
-| Padding          | Sets the top and bottom padding of the section | None, Small, Medium Large |
+| Option Name      | Description                                                                |
+|------------------|----------------------------------------------------------------------------|
+| Background Color | Sets the background color of the section ([See colors](#colors))           |
+| Background Image | Sets the background image of the section                                   |
+| Padding          | Sets the top and bottom padding of the section (None, Small, Medium Large) |
+
+---
 
 ### Side Image
 
@@ -129,6 +166,8 @@ This component is used to show a hero section with another image to the side.
 | Background Video        | The background video of the hero                                 |
 | Anchor Link             | Sets the jump/anchor link at the bottom of the hero              |
 | Side Image              | The image to show on the right-side of the hero on desktop       |
+
+---
 
 ### Statistic
 
