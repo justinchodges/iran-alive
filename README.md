@@ -7,14 +7,14 @@ This theme was created for IranAlive.org.
   - [Typography](#typography)
   - [Font Sizes](#font-sizes)
 - [Page Templates](#page-templates)
-  - [Default Template](#default-template);
+  - [Default Template](#default-template)
   - [Header Dark](#header-dark)
-  - [No Nav](#no-nav);
-- [Theme Blocks](#theme-blocks);
-  - [Blockquote](#blockquote);
-  - [Card](#card);
-  - [Donate Form](#donate-form);
-  - [Donation Tiers](#donation-tiers);
+  - [No Nav](#no-nav)
+- [Theme Blocks](#theme-blocks)
+  - [Blockquote](#blockquote)
+  - [Card](#card)
+  - [Donate Form](#donate-form)
+  - [Donation Tiers](#donation-tiers)
   - [Hero](#hero)
   - [List](#list)
   - [Section](#section)
