@@ -21,17 +21,7 @@
                         <div class="column-12 column-lg-5 order-0 order-lg-2">
                             <div class="row align-items-center">
                                 <div class="column-12 column-lg-6 order-1 order-lg-0 m-y-2">
-                                    <nav class="footer-nav">
-                                        <div class="footer-nav__item">
-                                            <a class="footer-nav__link" href="/about">About</a>
-                                        </div>
-                                        <div class="footer-nav__item">
-                                            <a class="footer-nav__link" href="/donate-monthly">Ambassadors</a>
-                                        </div>
-                                        <div class="footer-nav__item">
-                                            <a class="footer-nav__link text-color-gold" href="/donate">Give</a>
-                                        </div>
-                                    </nav>
+                                    <?php get_footer_nav(); ?>
                                 </div>
                                 <div class="column-12 column-lg-6 text-align-center order-0 order-lg-1 m-y-2">
                                     <a href="https://www.ecfa.org/" title="link to ECFA's report on Iran Alive">

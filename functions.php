@@ -7,9 +7,14 @@ $theme_version = $theme->get('Version');
 add_theme_support( 'menus' );
 
 add_action( 'after_setup_theme', 'register_primary_menu' );
+add_action( 'after_setup_theme', 'register_footer_menu' );
 
 function register_primary_menu() {
 	register_nav_menu( 'primary', __( 'Primary Menu', 'iran-alive' ) );
+}
+
+function register_footer_menu() {
+    register_nav_menu( 'footer', __( 'Footer Menu', 'iran-alive' ) );
 }
 
 wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/assets/styles/main.css', null, $theme_version );
@@ -55,6 +60,20 @@ function get_nav() {
         <div class="hamburger__bar"></div>
         <div class="hamburger__bar"></div>
     </button>
+<?php
+}
+
+function get_footer_nav() {
+    $items = wp_get_nav_menu_items( 'Footer Menu' );
+?>
+    <nav class="footer-nav">
+        <?php foreach ( $items as $item ) { ?>
+            <div class="footer-nav__item">
+                <a class="footer-nav__link<?php if ( $item->title === 'Give') { echo ' text-color-gold'; } ?>" href="<?= $item->url; ?>"><?= $item->title; ?></a>
+            </div>
+        <?php } ?>
+    </nav>
+                                        
 <?php
 }
 
