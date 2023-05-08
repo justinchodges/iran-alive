@@ -1,0 +1,32 @@
+@import './../01-settings/grid';
+@import './../02-tools/grid';
+
+.grid {
+    @include styleAllBreakpoints() {
+        display: grid;
+    }
+
+    &-gap {
+        @include styleAllBreakpoints() {
+
+            @each $key,
+            $value in $gutters {
+                &-#{$key} {
+                    gap: $value;
+                }
+            }
+        }
+    }
+
+    &-cols {
+        @include styleAllBreakpoints() {
+
+            @each $key,
+            $value in $grid-cols {
+                &-#{$key} {
+                    grid-template-columns: $value;
+                }
+            }
+        }
+    }
+}
