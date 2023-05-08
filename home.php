@@ -80,19 +80,27 @@ get_header( 'dark' );
         padding: 0 1rem 1rem;
         line-height: 1.25em;
     }
+
+    .story-card__summary > p {
+        font-size: 1rem;
+    }
+
+    .story-card__summary > *:last-child {
+        margin-bottom: 0;
+    }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <?php
-while ( have_posts() ) : the_post(); 
-    $count = 0;
+$count = 0;
 
+while ( have_posts() ) : the_post(); 
     $thumbnail = get_the_post_thumbnail( $post->id );
 
     if ( $count === 0 ) {
 ?>
         <div class="hero"> 
             <div class="hero__background">
-                <?= $thumbnail; ?>
+                <?php the_post_thumbnail( 'full', array('class' => 'hero__background-image' ) ); ?>
             </div>
             <div class="hero__content">
                 <div class="container-xl">
@@ -115,19 +123,22 @@ while ( have_posts() ) : the_post();
         </div>
 <?php
     }
+
+    $count += 1;
 endwhile; 
 ?>
-<div class="post p-t-9 p-xl-t-10">
-    <div class="container-xl p-b-5 p-xl-y-6">
+<div class="post">
+    <div class="container-xl p-y-5 p-xl-y-6">
         <div class="d-grid grid-gap-3 grid-cols-1 grid-cols-md-2 grid-cols-lg-3">
             <?php 
                 $count = 0;
+
                 while ( have_posts() ) : the_post(); 
 
                     if ( $count > 0 ) {
             ?>
                 <a class="story-card" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
-                    <img class="story-card__image" src="https://iranalive.org/wp-content/uploads/2022/09/Group-65.jpg" alt="" />
+                    <?php the_post_thumbnail( 'large', array('class' => 'story-card__image' ) ); ?>
                     <div class="story-card__info">
                         <div class="story-card__title font-family-serif font-size-4"><?php the_title(); ?></div>
                         <div class="story-card__summary">
@@ -135,17 +146,6 @@ endwhile;
                         </div>
                     </div>
                 </a>
-                <!--
-                <article class="post-card bg-white p-2 p-lg-4 m-y-4" style="border-radius:.5rem;border:1px solid #ddd;box-shadow:0 0 .5rem rgba(0,0,0,.1);">
-                    <h2 class="post-card__title font-size-4 font-size-lg-5"><a class="text-color-black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <div class="post-card__content">
-                        <?php the_excerpt(); ?>
-                    </div>
-                    <div class="text-align-center text-align-md-left">
-                        <a class="text-color-tan d-inline-block font-family-serif font-size-3" href="<?php the_permalink(); ?>" style="font-weight:semi-bold;">Read more &gt;</a>
-                    </div>
-                </article>
-                -->
             <?php 
                     }
 

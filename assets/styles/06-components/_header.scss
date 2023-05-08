@@ -34,7 +34,7 @@
     }
 
     @include styleBreakpoint('xl') {
-        padding: 2rem 0;
+        padding: 2rem 0 0;
 
         & ~ .page > *:first-child:not(.hero) {
             padding-top: 8.5rem;
