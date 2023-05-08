@@ -23,6 +23,7 @@
         height: 100%;
         overflow: hidden;
 
+        & > img,
         &-image,
         &-video {
             position: absolute;

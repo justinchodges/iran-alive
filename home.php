@@ -86,11 +86,13 @@ get_header( 'dark' );
 while ( have_posts() ) : the_post(); 
     $count = 0;
 
+    $thumbnail = get_the_post_thumbnail( $post->id );
+
     if ( $count === 0 ) {
 ?>
         <div class="hero"> 
             <div class="hero__background">
-                <img class="hero__background-image" src="https://iranalive.org/wp-content/uploads/2022/09/parastoo-maleki-mWPug8R-cv4-unsplash-1.jpg" alt="" srcset="https://iranalive.org/wp-content/uploads/2022/09/parastoo-maleki-mWPug8R-cv4-unsplash-1-300x213.jpg 300w,https://iranalive.org/wp-content/uploads/2022/09/parastoo-maleki-mWPug8R-cv4-unsplash-1-768x546.jpg 768w,https://iranalive.org/wp-content/uploads/2022/09/parastoo-maleki-mWPug8R-cv4-unsplash-1-1024x728.jpg 1024w,https://iranalive.org/wp-content/uploads/2022/09/parastoo-maleki-mWPug8R-cv4-unsplash-1.jpg 1600w">
+                <?= $thumbnail; ?>
             </div>
             <div class="hero__content">
                 <div class="container-xl">
