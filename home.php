@@ -1,5 +1,5 @@
 <?php
-get_header( 'dark' );
+get_header();
 ?>
 <style>
     .post-card__content p {
@@ -57,7 +57,6 @@ get_header( 'dark' );
         height: 100%;
         object-fit: cover;
         background: #333;
-        border-radius: .5rem;
     }
 
     .story-card__info {
@@ -66,9 +65,9 @@ get_header( 'dark' );
         left: 0;
         z-index: 1;
         width: 100%;
+        max-height: 100%;
+        overflow: auto;
         background: #FFFFFF;
-        border-bottom-right-radius: .5rem;
-        border-bottom-left-radius: .5rem;
     }
 
     .story-card__title {
@@ -94,8 +93,6 @@ get_header( 'dark' );
 $count = 0;
 
 while ( have_posts() ) : the_post(); 
-    $thumbnail = get_the_post_thumbnail( $post->id );
-
     if ( $count === 0 ) {
 ?>
         <div class="hero"> 
@@ -174,10 +171,9 @@ endwhile;
             );
         }
 
-        var $storyCards = $('.story-card');
-
-        $storyCards.each(function() {
-            StoryCard(this);
+        var storyCards = document.querySelectorAll('.story-card');
+        storyCards.forEach(function(card) {
+            new StoryCard(card);
         });
     })();
 </script>
