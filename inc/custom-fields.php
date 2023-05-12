@@ -705,4 +705,120 @@ acf_add_local_field_group(array(
 	'show_in_rest' => 0,
 ));
 
+acf_add_local_field_group(array(
+	'key' => 'group_645db55e939a4',
+	'title' => 'Featured Card',
+	'fields' => array(
+		array(
+			'key' => 'field_645db5684ebb1',
+			'label' => 'Image',
+			'name' => 'image',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/featured-card',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+));
+
+acf_add_local_field_group(array(
+	'key' => 'group_645dba78f0299',
+	'title' => 'Thermometer',
+	'fields' => array(
+		array(
+			'key' => 'field_645dba7de886b',
+			'label' => 'Raised',
+			'name' => 'raised',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => 0,
+			'max' => '',
+			'step' => '',
+		),
+		array(
+			'key' => 'field_645dba94e886c',
+			'label' => 'Goal',
+			'name' => 'goal',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => 1,
+			'max' => '',
+			'step' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/thermometer',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+));
+
 endif;		
