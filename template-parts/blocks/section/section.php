@@ -46,7 +46,7 @@ $template = array(
             <img class="section__background-image" src="<?= $backgroundImage['url']; ?>" alt="<?= $backgroundImage['alt']; ?>" srcset="<?= get_image_srcset( $backgroundImage ); ?>" />
         </div>
     <?php } ?>
-    <div class="section__content container-lg">
+    <div class="section__content container-<?= $containerWidth ? $containerWidth : 'lg'; ?>">
         <InnerBlocks template="<?= esc_attr( wp_json_encode( $template ) ); ?>" />
     </div>
 </div>

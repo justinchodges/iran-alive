@@ -540,6 +540,33 @@ acf_add_local_field_group(array(
 			'ajax' => 0,
 			'placeholder' => '',
 		),
+		array(
+			'key' => 'field_645e5e6cff68e',
+			'label' => 'Container Width',
+			'name' => 'container_width',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'sm' => 'Small',
+				'md' => 'Medium',
+				'lg' => 'Large',
+				'xl' => 'Extra-large',
+			),
+			'default_value' => 'lg',
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
 	),
 	'location' => array(
 		array(
