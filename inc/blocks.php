@@ -53,6 +53,22 @@ function iranalive_blocktypes() {
             'keywords'          => array( 'section' )
         ) );
 
+        // FEATURED CARD
+        acf_register_block_type( array(
+            'name'              => 'featured-card',
+            'title'             => __( 'Featured Card', 'iran-alive' ),
+            'description'       => __( 'A featured card', 'iran-alive' ),
+            'render_template'   => 'template-parts/blocks/featured-card/featured-card.php',
+            'category'          => 'layout',
+            'keywords'          => array( 'card' ),
+            'supports'		    => [
+                'align'			    => true,
+                'anchor'		    => true,
+                'customClassName'   => true,
+                'jsx' 			    => true,
+            ]
+        ) );
+
         // HERO
         acf_register_block_type( array(
             'name'              => 'hero',
@@ -157,6 +173,16 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/statistic/statistic.php',
             'category'          => 'layout',
             'keywords'          => array( 'statistic' )
+        ) );
+
+        // THERMOMETER
+        acf_register_block_type( array(
+            'name'              => 'thermometer',
+            'title'             => __( 'Thermometer', 'iran-alive' ),
+            'description'       => __( 'A thermometer', 'iran-alive' ),
+            'render_template'   => 'template-parts/blocks/thermometer/thermometer.php',
+            'category'          => 'layout',
+            'keywords'          => array( 'thermometer', 'meter' )
         ) );
     }
 }
