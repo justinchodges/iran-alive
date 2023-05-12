@@ -1,5 +1,7 @@
 <?php
 get_header();
+
+$defaultThumbnail = 'https://iranalive.org/wp-content/uploads/2023/05/story-cover.jpg';
 ?>
 <style>
     .post-card__content p {
@@ -72,6 +74,7 @@ get_header();
 
     .story-card__title {
         padding: 1rem;
+        font-size: 1.75rem;
     }
 
     .story-card__summary {
@@ -94,9 +97,19 @@ $count = 0;
 
 while ( have_posts() ) : the_post(); 
     if ( $count === 0 ) {
+        $thumbnail = get_the_post_thumbnail_url( $post->ID, 'large' );
 ?>
         <div class="hero"> 
             <div class="hero__background">
+                <?php 
+                    if ( $thumbnail ) {
+                        the_post_thumbnail( 'full', array('class' => 'hero__background-image' ) );
+                    } else {
+                ?>
+                        <img class="hero__background-image" src="<?= $defaultThumbnail; ?>" alt="" />
+                <?php
+                    } 
+                ?>
                 <?php the_post_thumbnail( 'full', array('class' => 'hero__background-image' ) ); ?>
             </div>
             <div class="hero__content">
@@ -133,9 +146,18 @@ endwhile;
                 while ( have_posts() ) : the_post(); 
 
                     if ( $count > 0 ) {
+                        $thumbnail = get_the_post_thumbnail_url( $post->ID, 'large' );
             ?>
                 <a class="story-card" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
-                    <?php the_post_thumbnail( 'large', array('class' => 'story-card__image' ) ); ?>
+                    <?php 
+                        if ( $thumbnail ) {
+                            the_post_thumbnail( 'full', array('class' => 'story-card__image' ) );
+                        } else {
+                    ?>
+                            <img class="story-card__image" src="<?= $defaultThumbnail; ?>" alt="" />
+                    <?php
+                        } 
+                    ?>
                     <div class="story-card__info">
                         <div class="story-card__title font-family-serif font-size-4"><?php the_title(); ?></div>
                         <div class="story-card__summary">
@@ -150,7 +172,7 @@ endwhile;
                 endwhile; 
             ?>
         </div>
-        <div class="text-align-center">
+        <div class="text-align-center m-t-5">
             <?php the_posts_pagination( array( 'mid_size' => 2 ) ); ?>
         </div>
     </div>
