@@ -2,9 +2,6 @@
 get_header();
 
 $defaultThumbnail = 'https://iranalive.org/wp-content/uploads/2023/05/story-cover.jpg';
-?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<?php
 $count = 0;
 
 while ( have_posts() ) : the_post(); 
@@ -59,25 +56,14 @@ endwhile;
 
                     if ( $count > 0 ) {
                         $thumbnail = get_the_post_thumbnail_url( $post->ID, 'large' );
-            ?>
-                <a class="story-card" href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
-                    <?php 
-                        if ( $thumbnail ) {
-                            the_post_thumbnail( 'full', array('class' => 'story-card__image' ) );
-                        } else {
-                    ?>
-                            <img class="story-card__image" src="<?= $defaultThumbnail; ?>" alt="" />
-                    <?php
-                        } 
-                    ?>
-                    <div class="story-card__info">
-                        <div class="story-card__title font-family-serif font-size-4"><?php the_title(); ?></div>
-                        <div class="story-card__summary">
-                            <?php the_excerpt(); ?>
-                        </div>
-                    </div>
-                </a>
-            <?php 
+
+                        StoryCard( array(
+                            'image' => $thumbnail ? $thumbnail['url'] : $defaultThumbnail,
+                            'imageAlt'  => get_the_title(),
+                            'link'      => get_the_permalink(),
+                            'title'     => get_the_title(),
+                            'summary'   => get_the_excerpt()
+                        ) );
                     }
 
                     $count++;
@@ -89,27 +75,5 @@ endwhile;
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    (function() {
-        function StoryCard(element) {
-            var $card = $(element);
-            var $summary = $card.find('.story-card__summary');
-
-            $card.hover(
-                function() {
-                    $summary.slideDown(200);
-                },
-                function() {
-                    $summary.slideUp(200);
-                }
-            );
-        }
-
-        var storyCards = document.querySelectorAll('.story-card');
-        storyCards.forEach(function(card) {
-            new StoryCard(card);
-        });
-    })();
-</script>
 <?php
 get_footer();

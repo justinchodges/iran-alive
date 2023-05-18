@@ -41,5 +41,18 @@ export default [
             }),
             commonjs()
         ]
+    },
+    {
+        input: './assets/javascripts/src/story-card.js',
+        output: {
+            file: './assets/javascripts/dist/story-card.js',
+            format: 'iife'
+        },
+        plugins: [
+            babel({
+                presets: ['@babel/preset-env']
+            }),
+            commonjs()
+        ]
     }
 ];

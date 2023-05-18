@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/../template-parts/blocks/story-card/story-card-component.php';
+
 function iranalive_blocktypes() {
     if ( function_exists( 'acf_register_block_type' ) ) {
          // BLOCKQUOTE
@@ -51,22 +53,6 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/donation-tiers/donation-tiers.php',
             'category'          => 'layout',
             'keywords'          => array( 'section' )
-        ) );
-
-        // FEATURED CARD
-        acf_register_block_type( array(
-            'name'              => 'featured-card',
-            'title'             => __( 'Featured Card', 'iran-alive' ),
-            'description'       => __( 'A featured card', 'iran-alive' ),
-            'render_template'   => 'template-parts/blocks/featured-card/featured-card.php',
-            'category'          => 'layout',
-            'keywords'          => array( 'card' ),
-            'supports'		    => [
-                'align'			    => true,
-                'anchor'		    => true,
-                'customClassName'   => true,
-                'jsx' 			    => true,
-            ]
         ) );
 
         // HERO
@@ -175,14 +161,14 @@ function iranalive_blocktypes() {
             'keywords'          => array( 'statistic' )
         ) );
 
-        // THERMOMETER
+        // STORY CARD
         acf_register_block_type( array(
-            'name'              => 'thermometer',
-            'title'             => __( 'Thermometer', 'iran-alive' ),
-            'description'       => __( 'A thermometer', 'iran-alive' ),
-            'render_template'   => 'template-parts/blocks/thermometer/thermometer.php',
+            'name'              => 'story-card',
+            'title'             => __( 'Story Card', 'iran-alive' ),
+            'description'       => __( 'A story card', 'iran-alive' ),
+            'render_template'   => 'template-parts/blocks/story-card/story-card.php',
             'category'          => 'layout',
-            'keywords'          => array( 'thermometer', 'meter' )
+            'keywords'          => array( 'story card' )
         ) );
     }
 }
