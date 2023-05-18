@@ -1,0 +1,50 @@
+.story-card {
+    position: relative;
+    border-radius: .5rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    aspect-ratio: 1 / 1.25;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: #333;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        max-height: 100%;
+        overflow: auto;
+        background: #FFFFFF;
+    }
+
+    &__title {
+        padding: 1rem;
+        font-size: 1.75rem;
+    }
+
+    &__summary {
+        display: none;
+        padding: 0 1rem 1rem;
+        line-height: 1.25em;
+
+        &>p {
+            font-size: 1rem;
+        }
+
+        &>*:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
