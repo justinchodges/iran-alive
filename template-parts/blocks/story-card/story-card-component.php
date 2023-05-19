@@ -22,7 +22,7 @@ function StoryCard($props = array()) {
     <a class="story-card" href="<?= $state['link']; ?>" title="<?= $state['title']; ?>">
         <img class="story-card__image" src="<?= $state['image']; ?>" alt="<?= $stage['imageAlt']; ?>" />
         <div class="story-card__info">
-            <div class="story-card__title font-family-serif font-size-5">
+            <div class="story-card__title font-family-serif font-size-4">
                 <?= $state['title']; ?>
             </div>
             <div class="story-card__summary">
