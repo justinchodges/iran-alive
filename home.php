@@ -58,7 +58,7 @@ endwhile;
                         $thumbnail = get_the_post_thumbnail_url( $post->ID, 'large' );
 
                         StoryCard( array(
-                            'image' => $thumbnail ? $thumbnail['url'] : $defaultThumbnail,
+                            'image' => $thumbnail ? $thumbnail : $defaultThumbnail,
                             'imageAlt'  => get_the_title(),
                             'link'      => get_the_permalink(),
                             'title'     => get_the_title(),
