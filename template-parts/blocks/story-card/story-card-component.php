@@ -26,7 +26,7 @@ function StoryCard($props = array()) {
                 <?= $state['title']; ?>
             </div>
             <div class="story-card__summary">
-                <p><?= $state['summary']; ?></p>
+                <?= $state['summary']; ?>
             </div>
         </div>
     </a>

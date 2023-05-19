@@ -62,7 +62,7 @@ endwhile;
                             'imageAlt'  => get_the_title(),
                             'link'      => get_the_permalink(),
                             'title'     => get_the_title(),
-                            'summary'   => get_the_excerpt()
+                            'summary'   => '<p>' . get_the_excerpt() . '</p>'
                         ) );
                     }
 
