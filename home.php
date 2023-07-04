@@ -8,16 +8,16 @@ while ( have_posts() ) : the_post();
     if ( $count === 0 ) {
         $thumbnail = get_the_post_thumbnail_url( $post->ID, 'large' );
 ?>
-        <style>
-            .hero.hero--featured-story {
-                min-height: auto;
-            }
-
-            .hero.hero--featured-story p {
-                font-size: 20px;
-            }
-        </style>
         <div class="hero hero--featured-story"> 
+            <style>
+                .hero.hero--featured-story {
+                    min-height: auto;
+                }
+
+                .hero.hero--featured-story p {
+                    font-size: 20px;
+                }
+            </style>
             <div class="hero__background">
                 <?php 
                     if ( $thumbnail ) {
