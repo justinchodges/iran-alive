@@ -11,13 +11,26 @@ if( !empty( $block['anchor'] ) )
 $image = get_field( 'image' );
 
 $template = array(
-    array( 'core/heading', array(
-        'level'     => 2,
-        'content'   => 'Title goes here',
-        'fontSize'  => '2xl'
-    ) ),
+	array('core/heading', array(
+		'level' => 2,
+		'content' => 'Title Goes Here',
+        'className' => 'has-xl-font-size',
+        'size' => 'xl'
+	)),
     array( 'core/paragraph', array(
-        'content'   => 'Content goes here.'
+        'content' => 'Content goes here.',
+    ) ),
+    array( 'acf/thermometer', array(
+        'data' => array(
+            'raised' => 50,
+            'goal' => 500
+        )
+    ) ),
+    array( 'acf/donate-form', array(
+        'data' => array(
+            'form_id' => 'wrLmXjGlya',
+            'form_template' => '<div id="wrLmXjGlya"><script type="text/javascript" src="https://default.salsalabs.org/api/widget/template/38cc5fcd-12b4-440d-b49b-2d0f0531b35b/?tId=wrLmXjGlya"></script></div>'
+        )
     ) )
 );
 ?>

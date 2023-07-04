@@ -117,6 +117,14 @@
             }
         }
     }
+
+    &.hero--featured-story {
+        min-height: auto;
+
+        p {
+            font-size: 20px;
+        }
+    }
 }
 
 @include styleBreakpoint('lg') {

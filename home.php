@@ -8,7 +8,16 @@ while ( have_posts() ) : the_post();
     if ( $count === 0 ) {
         $thumbnail = get_the_post_thumbnail_url( $post->ID, 'large' );
 ?>
-        <div class="hero"> 
+        <style>
+            .hero.hero--featured-story {
+                min-height: auto;
+            }
+
+            .hero.hero--featured-story p {
+                font-size: 20px;
+            }
+        </style>
+        <div class="hero hero--featured-story"> 
             <div class="hero__background">
                 <?php 
                     if ( $thumbnail ) {
@@ -26,7 +35,7 @@ while ( have_posts() ) : the_post();
                     <div class="row">
                         <div class="column-8 column-md-7 has-white-color">
                             <h1 class="has-gold-color m-b-0 font-family-sans" style="text-transform:uppercase;">Stories</h1>
-                            <h2 class="has-text-color has-4-xl-font-size">
+                            <h2 class="has-text-color has-2-xl-font-size">
                                 <a class="has-white-color" style="text-decoration:none;" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
                             <?php the_excerpt(); ?>

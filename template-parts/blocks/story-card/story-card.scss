@@ -1,3 +1,5 @@
+@import './../../../assets/styles/01-settings/colors';
+
 .story-card {
     display: block;
     position: relative;
@@ -46,6 +48,17 @@
 
         &>*:last-child {
             margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        background: $black;
+        color: $white;
+        font-size: .875rem;
+        padding: .75rem 1.25rem;
+
+        &-holder {
+            text-align: right;
         }
     }
 }

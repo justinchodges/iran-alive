@@ -27,6 +27,9 @@ function StoryCard($props = array()) {
             </div>
             <div class="story-card__summary">
                 <?= $state['summary']; ?>
+                <div class="story-card__button-holder">
+                    <div class="story-card__button button d-inline-block">Read more</div>
+                </div>
             </div>
         </div>
     </a>

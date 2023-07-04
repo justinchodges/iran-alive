@@ -5,7 +5,11 @@
         }
 
         input[type="text"],
-        input[type="email"]{
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
             width: 100%;
             border: 1px solid #ccc;
             padding: 1rem;

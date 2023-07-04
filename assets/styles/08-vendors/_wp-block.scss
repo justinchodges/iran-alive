@@ -7,3 +7,11 @@
     height: auto;
     aspect-ratio: 16 / 9;
 }
+
+.wp-block-post-featured-image img {
+    max-height: 400px;
+    width: auto !important;
+    max-width: 100%;
+    margin: 2rem auto;
+    display: block;
+}

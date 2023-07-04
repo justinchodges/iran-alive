@@ -55,16 +55,33 @@ function iranalive_blocktypes() {
             'keywords'          => array( 'section' )
         ) );
 
+        // FEATURED CARD
+        acf_register_block_type( array(
+            'name'              => 'featured-card',
+            'title'             => __( 'Featured Card', 'iran-alive' ),
+            'description'       => __( 'A featured card', 'iran-alive' ),
+            'render_template'   => 'template-parts/blocks/featured-card/featured-card.php',
+            'category'          => 'layout',
+            'keywords'          => array( 'section' ),
+            'supports'		    => [
+                'align'			    => true,
+                'anchor'		    => true,
+                'customClassName'   => true,
+                'jsx' 			    => true,
+            ]
+        ) );
+
         // HERO
         acf_register_block_type( array(
             'name'              => 'hero',
+            'align'             => 'full',
             'title'             => __( 'Hero', 'iran-alive' ),
             'description'       => __( 'A hero content block', 'iran-alive' ),
             'render_template'   => 'template-parts/blocks/hero/hero.php',
             'category'          => 'layout',
             'keywords'          => array( 'hero', 'featured' ),
             'supports'		    => [
-                'align'			    => true,
+                'align'			    => array( 'full' ),
                 'anchor'		    => true,
                 'customClassName'   => true,
                 'jsx' 			    => true,
@@ -74,13 +91,14 @@ function iranalive_blocktypes() {
         // HERO FULL
         acf_register_block_type( array(
             'name'              => 'hero-full',
+            'align'             => 'full',
             'title'             => __( 'Hero Full', 'iran-alive' ),
             'description'       => __( 'A hero full content block', 'iran-alive' ),
             'render_template'   => 'template-parts/blocks/hero/hero-full.php',
             'category'          => 'layout',
             'keywords'          => array( 'hero', 'featured' ),
             'supports'		    => [
-                'align'			    => true,
+                'align'			    => array( 'full' ),
                 'anchor'		    => true,
                 'customClassName'   => true,
                 'jsx' 			    => true,
@@ -90,13 +108,14 @@ function iranalive_blocktypes() {
         // HERO SPLIT
         acf_register_block_type( array(
             'name'              => 'hero-split',
+            'align'             => 'full',
             'title'             => __( 'Hero Split', 'iran-alive' ),
             'description'       => __( 'A hero split content block', 'iran-alive' ),
             'render_template'   => 'template-parts/blocks/hero/hero-split.php',
             'category'          => 'layout',
             'keywords'          => array( 'hero', 'featured' ),
             'supports'		    => [
-                'align'			    => true,
+                'align'			    => array( 'full' ),
                 'anchor'		    => true,
                 'customClassName'   => true,
                 'jsx' 			    => true,
@@ -122,13 +141,14 @@ function iranalive_blocktypes() {
         // SECTION
         acf_register_block_type( array(
             'name'              => 'section',
+            'align'             => 'full',
             'title'             => __( 'Section', 'iran-alive' ),
             'description'       => __( 'A section block', 'iran-alive' ),
             'render_template'   => 'template-parts/blocks/section/section.php',
             'category'          => 'layout',
             'keywords'          => array( 'section' ),
             'supports'		    => [
-                'align'			    => true,
+                'align'			    => array( 'full' ),
                 'anchor'		    => true,
                 'customClassName'   => true,
                 'jsx' 			    => true,
@@ -169,6 +189,16 @@ function iranalive_blocktypes() {
             'render_template'   => 'template-parts/blocks/story-card/story-card.php',
             'category'          => 'layout',
             'keywords'          => array( 'story card' )
+        ) );
+
+        // THERMOMETER
+        acf_register_block_type( array(
+            'name'              => 'thermometer',
+            'title'             => __( 'Thermometer', 'iran-alive' ),
+            'description'       => __( 'A thermometer', 'iran-alive' ),
+            'render_template'   => 'template-parts/blocks/thermometer/thermometer.php',
+            'category'          => 'layout',
+            'keywords'          => array( 'section' )
         ) );
     }
 }
