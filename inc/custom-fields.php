@@ -282,7 +282,7 @@ acf_add_local_field_group(array(
 	'show_in_rest' => 0,
 ));
 
-acf_add_local_field_group(array(
+acf_add_local_field_group( array(
 	'key' => 'group_630812c383a80',
 	'title' => 'Hero',
 	'fields' => array(
@@ -290,6 +290,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_630812eb34509',
 			'label' => 'Background Image',
 			'name' => 'background_image',
+			'aria-label' => '',
 			'type' => 'image',
 			'instructions' => '',
 			'required' => 0,
@@ -314,6 +315,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_630ec256bfb2c',
 			'label' => 'Background Image Mobile',
 			'name' => 'background_image_mobile',
+			'aria-label' => '',
 			'type' => 'image',
 			'instructions' => '',
 			'required' => 0,
@@ -338,6 +340,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_63162248790e9',
 			'label' => 'Background Video',
 			'name' => 'background_video',
+			'aria-label' => '',
 			'type' => 'file',
 			'instructions' => '',
 			'required' => 0,
@@ -357,6 +360,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_63161e5cda289',
 			'label' => 'Anchor Link',
 			'name' => 'anchor_link',
+			'aria-label' => '',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
@@ -371,6 +375,32 @@ acf_add_local_field_group(array(
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_64cc6236ef56e',
+			'label' => 'Height',
+			'name' => 'height',
+			'aria-label' => '',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'full' => 'full',
+				'auto' => 'auto',
+			),
+			'default_value' => 'full',
+			'return_format' => 'value',
+			'multiple' => 0,
+			'allow_null' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'placeholder' => '',
 		),
 	),
 	'location' => array(
@@ -405,7 +435,7 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
-));
+) );
 
 acf_add_local_field_group(array(
 	'key' => 'group_6316a2048257d',

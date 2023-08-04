@@ -7,8 +7,12 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 8rem);
     padding: 5.5rem 0;
+    min-height: calc(100vh - 8rem);
+
+    &-auto {
+        min-height: auto;
+    }
 
     &-split {
         padding: 5.5rem 0;
@@ -100,7 +104,10 @@
     }
 
     @include styleBreakpoint('lg') {
-        min-height: 100vh;
+        &:not(.hero-auto) {
+            min-height: 100vh;
+        }
+        
         padding: 8.5rem 0;
 
         &-split {

@@ -3,8 +3,23 @@ require_once __DIR__ . '/../template-parts/blocks/story-card/story-card-componen
 
 function iranalive_blocktypes() {
     if ( function_exists( 'acf_register_block_type' ) ) {
-         // BLOCKQUOTE
-         acf_register_block_type( array(
+        // BIOGRAPHY
+        acf_register_block_type( array(
+            'name'              => 'biography',
+            'title'             => __( 'Biography', 'iran-alive' ),
+            'description'       => __( 'A biography block', 'iran-alive' ),
+            'render_template'   => 'template-parts/blocks/biography/biography.php',
+            'category'          => 'layout',
+            'keywords'          => array( 'biography' ),
+            'supports'		    => [
+                'align'			    => true,
+                'anchor'		    => true,
+                'jsx' 			    => true,
+            ]
+        ) );
+
+        // BLOCKQUOTE
+        acf_register_block_type( array(
             'name'              => 'blockquote',
             'title'             => __( 'Blockquote', 'iran-alive' ),
             'description'       => __( 'A blockquote block', 'iran-alive' ),

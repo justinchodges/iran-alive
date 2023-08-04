@@ -9,6 +9,11 @@ $backgroundImage = get_field( 'background_image' );
 $backgroundImageMobile = get_field( 'background_image_mobile' );
 $backgroundVideo = get_field( 'background_video' );
 $anchorLink = get_field( 'anchor_link' );
+$height = get_field( 'height' );
+
+if ( $height === 'auto' ) {
+    $classes[] = 'hero-auto';
+}
 
 $template = array(
 	array('core/heading', array(

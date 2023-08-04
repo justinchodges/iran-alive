@@ -14,6 +14,14 @@
                 &-#{$key} {
                     gap: $value;
                 }
+
+                &-y-#{$key} {
+                    row-gap: $value;
+                }
+
+                &-x-#{$key} {
+                    column-gap: $value;
+                }
             }
         }
     }
@@ -26,6 +34,14 @@
                 &-#{$key} {
                     grid-template-columns: $value;
                 }
+            }
+
+            &-\[1fr\,2fr\] {
+                grid-template-columns: 1fr 2fr;
+            }
+
+            &-\[1fr\,3fr\] {
+                grid-template-columns: 1fr 3fr;
             }
         }
     }
