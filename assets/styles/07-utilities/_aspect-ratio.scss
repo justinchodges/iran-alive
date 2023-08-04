@@ -5,8 +5,10 @@
         &-letterbox,
         &-square,
         &-standard,
-        &-wide {
+        &-wide,
+        &-responsive {
             position: relative;
+            overflow: hidden;
 
             & > * {
                 position: absolute;

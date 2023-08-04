@@ -153,6 +153,21 @@ function iranalive_blocktypes() {
             ]
         ) );
 
+        acf_register_block_type( array(
+            'name'              => 'responsive-image',
+            'title'             => __( 'Responsive Image', 'iran-alive' ),
+            'description'       => __( 'A responsive image block', 'iran-alive' ),
+            'render_template'   => 'template-parts/blocks/responsive-image/responsive-image.php',
+            'category'          => 'layout',
+            'keywords'          => array( 'responsive image', 'featured' ),
+            'supports'		    => [
+                'align'			    => true,
+                'anchor'		    => true,
+                'customClassName'   => true,
+                'jsx' 			    => true,
+            ]
+        ) );
+
         // SECTION
         acf_register_block_type( array(
             'name'              => 'section',
