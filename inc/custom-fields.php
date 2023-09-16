@@ -1358,4 +1358,75 @@ add_action( 'acf/include_fields', function() {
 	) );
 } );
 
+add_action( 'acf/include_fields', function() {
+	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+		return;
+	}
+
+	acf_add_local_field_group( array(
+		'key' => 'group_631361bd0f156',
+		'title' => 'Donate Form',
+		'fields' => array(
+			array(
+				'key' => 'field_631630be4357f',
+				'label' => 'Form ID',
+				'name' => 'form_id',
+				'aria-label' => '',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_633398072000e',
+				'label' => 'Form Template',
+				'name' => 'form_template',
+				'aria-label' => '',
+				'type' => 'textarea',
+				'instructions' => '(HTML)',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'new_lines' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'acf/donate-form',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	) );
+} );
+
 endif;		
