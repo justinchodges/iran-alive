@@ -20,6 +20,9 @@ $defaultThumbnail = 'https://iranalive.org/wp-content/uploads/2023/05/story-cove
             ?>
         <?php endwhile; ?>
     </div>
+    <div class="text-align-center m-t-5">
+        <?php the_posts_pagination( array( 'mid_size' => 2 ) ); ?>
+    </div>
 </div>
 <?php
 
