@@ -26,11 +26,22 @@ function DonateForm( $props = array() ) {
         $props = new DonateFormProps( $props );
     }
 
+    $donateForm = array(
+        'form_id' => $props->form_id,
+        'form_template' => $props->form_template,
+    );
+
+    foreach ( $props as $key => $value ) {
+        if ( array_key_exists( $donateForm, $key ) ) {
+            $donateForm[$key] = $value;
+        }
+    }
+
     wp_enqueue_script( 'iran-alive-donate-form-js', get_template_directory_uri() . '/assets/javascripts/dist/donate-form.js', null, $theme_version, true );
 
-    add_modal( $props->form_id, $props->form_template );
+    add_modal( $donateForm['form_id'], $donateForm['form_template'] );
 ?>
-<div class="donate-form is-one-time" data-form-id="<?= $props->form_id; ?>">
+<div class="donate-form is-one-time" data-form-id="<?= $donateForm['form_id']; ?>">
     <div class="donate-form__controller">
         <div class="donate-form__frequencies">
             <button class="donate-form__frequency" value="Give Once" selected="selected">Give Once</button>

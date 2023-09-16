@@ -2,7 +2,7 @@
 add_action( 'init', 'custom_post_type' );
 
 function custom_post_type() {
-    register_post_type( 'php_newsletter',
+    register_post_type( 'newsletter',
         array(
             'labels' => array(
                 'name' => __( 'Newsletters' ),
