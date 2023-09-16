@@ -3,12 +3,12 @@ function DonateForm( $props = array() ) {
     global $theme_version;
 
     $donateForm = array(
-        'form_id' => $props->form_id,
-        'form_template' => $props->form_template,
+        'form_id' => '',
+        'form_template' => '',
     );
 
     foreach ( $props as $key => $value ) {
-        if ( array_key_exists( $donateForm, $key ) ) {
+        if ( isset( $donateForm[$key] ) ) {
             $donateForm[$key] = $value;
         }
     }
