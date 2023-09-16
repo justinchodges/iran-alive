@@ -1,30 +1,6 @@
 <?php 
-class DonateFormProps {
-    public  string  $form_id;
-    public  string  $form_template;
-
-    public function __construct( $props = array() ) {
-        foreach ( $props as $key => $value ) {
-            if ( property_exists( $this, $key ) ) {
-                $this->$key = $value;
-            }
-        }
-    }
-
-    public function to_array() {
-        return array(
-            'form_id' => $this->form_id,
-            'form_template' => $this->form_template,
-        );
-    }
-}
-
 function DonateForm( $props = array() ) {
     global $theme_version;
-    
-    if ( !$props instanceof DonateFormProps ) {
-        $props = new DonateFormProps( $props );
-    }
 
     $donateForm = array(
         'form_id' => $props->form_id,
