@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../template-parts/blocks/donate-form/donate-form-component.php';
 require_once __DIR__ . '/../template-parts/blocks/story-card/story-card-component.php';
 
 function iranalive_blocktypes() {

@@ -77,6 +77,7 @@ function get_footer_nav() {
 <?php
 }
 
+require_once __DIR__ . '/inc/post-types.php';
 require_once __DIR__ . '/inc/blocks.php';
 require_once __DIR__ . '/inc/custom-fields.php';
 require_once __DIR__ . '/inc/theme-functions.php';
