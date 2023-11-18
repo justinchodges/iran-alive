@@ -19,8 +19,8 @@ $template = array();
 ?>
 <div class="<?= implode( ' ', $classes ); ?>"<?= $anchor; ?>>
     <div class="thermometer__details">
-        <span class="thermometer__raised">$<?= $raised; ?></span>
-        <span class="thermometer__goal">raised of $<?= $goal; ?> goal</span>
+        <span class="thermometer__raised">$<?= number_format( $raised ); ?></span>
+        <span class="thermometer__goal">raised of $<?= number_format( $goal ); ?> goal</span>
     </div>
     <div class="thermometer__slider">
         <div class="thermometer__progress" style="width:<?= $percent; ?>%;"></div>
