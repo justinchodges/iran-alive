@@ -20,6 +20,8 @@ import { Modal } from './../../../assets/javascripts/src/modal';
         let checkedInterval = null;
 
         const init = () => {
+            const salsaDesignation = modal.querySelector('.sli-input[name="designation"]');
+            let salsaDesignationOptions = null;
             const salsaOneTimeAmounts = modal.querySelectorAll('.sli-oneTimeAmountRadio');
             const salsaOneTimeAmountOtherCheckbox = modal.querySelector('.sli-oneTimeAmountInput.sli-customAmount');
             const salsaMonthlyAmounts = modal.querySelectorAll('.sli-recurringAmountRadio');
@@ -27,7 +29,51 @@ import { Modal } from './../../../assets/javascripts/src/modal';
             const salsaFrequency = modal.querySelector('.sli-selectRecurring .sli-input');
             const salsaNext = modal.querySelector('.sli-button[data-ignite-button-step="2"]');
             const salsaBack = modal.querySelector('.sli-button[data-ignite-button-step="1"]');
+            const card = element.querySelector('.donate-form__card');
             const frequencies = element.querySelectorAll('.donate-form__frequency');
+            let designation = null;
+            let designationSelect =  null;
+
+            if (salsaDesignation) {
+                salsaDesignationOptions = salsaDesignation.querySelectorAll('option');
+
+                designation = document.createElement('div');
+                designation.className = 'donate-form__designation';
+
+                const designationLabel = document.createElement('label');
+                designationLabel.className = 'donate-form__designation-title';
+                designationLabel.innerText = 'Select a designation';
+                designation.append(designationLabel);
+
+                const designationContainer = document.createElement('div');
+                designationContainer.className = 'donate-form__designation-container';
+                designation.append(designationContainer);
+
+                designationSelect = document.createElement('select');
+                designationSelect.className = 'donate-form__designation-select';
+                designationContainer.append(designationSelect);
+
+                salsaDesignationOptions.forEach((option, i) => {
+                    const optionElement = document.createElement('option');
+                    optionElement.innerText = option.value;
+                    optionElement.value = option.value;
+                    designationSelect.append(optionElement);
+                });
+
+                designationSelect.addEventListener('change', () => {
+                    salsaDesignation.value = designationSelect.value;
+
+                    var event = new Event('change');
+                    salsaDesignation.dispatchEvent(event);
+                });
+
+                salsaDesignation.addEventListener('change', () => {
+                    designationSelect.value = salsaDesignation.value;
+                });
+
+                card.before(designation);
+            }
+ 
             const modalControls = new Modal({
                 element: modal,
                 onClose: () => salsaBack.click()

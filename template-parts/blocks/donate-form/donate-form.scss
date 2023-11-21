@@ -40,6 +40,37 @@
         }
     }
 
+    &__designation {
+        background: $tan-light;
+        border: 1px solid $tan;
+        border-radius: .25rem;
+        margin-bottom: 1.5rem;
+
+        &-title {
+            display: block;
+            background: $tan;
+            padding: .5rem;
+            color: $white;
+            font-size: map-get($font-sizes, 3);
+            font-weight: 500;
+            text-align: center;
+        }
+
+        &-container {
+            padding: 1.5rem;
+        }
+
+        &-select {
+            display: block;
+            width: 100%;
+            padding: .75rem;
+            border: 1px solid $tan;
+            border-radius: .25rem;
+            color: $tan;
+            font-size: 100%;
+        }
+    }
+
     &__card {
         background: $tan-light;
         border: 1px solid $tan;
