@@ -160,7 +160,7 @@
             if (oneTimeAmount.dataset.igniteAmount) {
               amount.value = oneTimeAmount.dataset.igniteAmount;
               if (oneTimeAmount.getAttribute('checked')) amount.setAttribute('selected', 'selected');
-              amount.innerHTML = "$".concat(parseInt(amount.value), " <span class=\"donate-form__card-amount-currency\">USD</span>");
+              amount.innerHTML = "$".concat(parseInt(amount.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","), " <span class=\"donate-form__card-amount-currency\">USD</span>");
             } else {
               amount.value = 'Other Amount';
               amount.innerHTML = "<span class=\"donate-form__card-amount-other-label\">Other Amount</span>\n                        <label class=\"donate-form__card-amount-other-holder\">\n                            <span class=\"donate-form__card-amount-other-symbol\">$</span>\n                            <input type=\"number\" class=\"donate-form__card-amount-other-input\" placeholder=\"Other\" min=\"1\" />\n                            <span class=\"donate-form__card-amount-other-currency\">USD</span>\n                        </label>";

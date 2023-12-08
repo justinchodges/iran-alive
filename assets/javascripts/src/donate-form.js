@@ -133,7 +133,7 @@ import { Modal } from './../../../assets/javascripts/src/modal';
                 if (oneTimeAmount.dataset.igniteAmount) {
                     amount.value = oneTimeAmount.dataset.igniteAmount;
                     if (oneTimeAmount.getAttribute('checked')) amount.setAttribute('selected', 'selected');
-                    amount.innerHTML = `\$${parseInt(amount.value)} <span class="donate-form__card-amount-currency">USD</span>`;
+                    amount.innerHTML = `\$${parseInt(amount.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} <span class="donate-form__card-amount-currency">USD</span>`;
                 } else {
                     amount.value = 'Other Amount';
                     amount.innerHTML = `<span class="donate-form__card-amount-other-label">Other Amount</span>
