@@ -57,7 +57,7 @@
         var checkedInterval = null;
 
         var init = function init() {
-          var salsaDesignation = modal.querySelector('.sli-input[name="designation"]');
+          var salsaDesignation = modal.querySelector('.sli-input[id="fund-selection-list"]');
           var salsaDesignationOptions = null;
           var salsaOneTimeAmounts = modal.querySelectorAll('.sli-oneTimeAmountRadio');
           var salsaOneTimeAmountOtherCheckbox = modal.querySelector('.sli-oneTimeAmountInput.sli-customAmount');
@@ -72,34 +72,52 @@
           var designationSelect = null;
 
           if (salsaDesignation) {
-            salsaDesignationOptions = salsaDesignation.querySelectorAll('option');
-            designation = document.createElement('div');
-            designation.className = 'donate-form__designation';
-            var designationLabel = document.createElement('label');
-            designationLabel.className = 'donate-form__designation-title';
-            designationLabel.innerText = 'Select a designation';
-            designation.append(designationLabel);
-            var designationContainer = document.createElement('div');
-            designationContainer.className = 'donate-form__designation-container';
-            designation.append(designationContainer);
-            designationSelect = document.createElement('select');
-            designationSelect.className = 'donate-form__designation-select';
-            designationContainer.append(designationSelect);
-            salsaDesignationOptions.forEach(function (option, i) {
-              var optionElement = document.createElement('option');
-              optionElement.innerText = option.value;
-              optionElement.value = option.value;
-              designationSelect.append(optionElement);
-            });
-            designationSelect.addEventListener('change', function () {
-              salsaDesignation.value = designationSelect.value;
-              var event = new Event('change');
-              salsaDesignation.dispatchEvent(event);
-            });
-            salsaDesignation.addEventListener('change', function () {
-              designationSelect.value = salsaDesignation.value;
-            });
-            card.before(designation);
+            var designationInterval = null;
+
+            var checkForDesignationOptions = function checkForDesignationOptions() {
+              if (designationInterval) {
+                clearInterval(designationInterval);
+              }
+
+              salsaDesignationOptions = salsaDesignation.querySelectorAll('option');
+
+              if (salsaDesignationOptions.length === 0) {
+                designationInterval = setTimeout(function () {
+                  checkForDesignationOptions();
+                }, 10);
+                return;
+              }
+
+              designation = document.createElement('div');
+              designation.className = 'donate-form__designation';
+              var designationLabel = document.createElement('label');
+              designationLabel.className = 'donate-form__designation-title';
+              designationLabel.innerText = 'Select a designation';
+              designation.append(designationLabel);
+              var designationContainer = document.createElement('div');
+              designationContainer.className = 'donate-form__designation-container';
+              designation.append(designationContainer);
+              designationSelect = document.createElement('select');
+              designationSelect.className = 'donate-form__designation-select';
+              designationContainer.append(designationSelect);
+              salsaDesignationOptions.forEach(function (option, i) {
+                var optionElement = document.createElement('option');
+                optionElement.innerText = option.innerText;
+                optionElement.value = option.value;
+                designationSelect.append(optionElement);
+              });
+              designationSelect.addEventListener('change', function () {
+                salsaDesignation.value = designationSelect.value;
+                var event = new Event('change');
+                salsaDesignation.dispatchEvent(event);
+              });
+              salsaDesignation.addEventListener('change', function () {
+                designationSelect.value = salsaDesignation.value;
+              });
+              card.before(designation);
+            };
+
+            checkForDesignationOptions();
           }
 
           var modalControls = new Modal({
