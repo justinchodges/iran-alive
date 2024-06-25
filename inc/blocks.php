@@ -222,6 +222,15 @@ function iranalive_blocktypes() {
             'keywords'          => array( 'story card' )
         ) );
 
+        // TESTIMONIES
+        acf_register_block_type( array(
+            'name'              => 'Testimonies',
+            'title'             => __( 'Testimonies', 'iran-alive' ),
+            'description'       => 'A testimonial block',
+            'render_template'   => 'template-parts/blocks/testimonies/testimonies.php',
+            'keywords'          => array( 'testmonials', 'testimonies' )
+        ) );
+
         // THERMOMETER
         acf_register_block_type( array(
             'name'              => 'thermometer',

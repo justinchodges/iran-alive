@@ -1,0 +1,79 @@
+@import './../../../assets/styles/01-settings/colors';
+@import './../../../assets/styles/01-settings/grid';
+@import './../../../assets/styles/01-settings/typography';
+
+.testimonies {
+    position: relative;
+    padding: 0 3rem;
+    color: $tan;
+
+    &__control {
+        position: absolute;
+        top: calc(50% - 2rem);
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+
+        &[disabled] {
+            opacity: .25;
+            cursor: not-allowed;
+        }
+
+        & > svg {
+            height: 40px;
+
+            & > polygon {
+                fill: $tan;
+            }
+        }
+
+        &--prev {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
+        }
+    }
+
+    &__window {
+        overflow: hidden;
+        display: flex;
+        scroll-behavior: smooth;
+    }
+
+    &__testimony {
+        width: 100%;
+        flex: none;
+        padding: 1rem 2rem;
+        text-align: center;
+
+        @media (min-width: map-get($breakpoints, 'lg')) {
+            &:nth-of-type(even) {
+                border-left: 4px solid;
+            }
+        }
+    }
+
+    &__image {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 0 0 2rem;
+    }
+
+    &__quote {
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    &__attribution {
+        text-transform: uppercase;
+    }
+
+    @media (min-width: map-get($breakpoints, 'lg')) {
+        &__testimony {
+            width: 50%;
+        }
+    }
+}

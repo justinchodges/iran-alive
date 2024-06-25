@@ -16,6 +16,7 @@ while ( have_posts() ) : the_post();
 
                 .hero.hero--featured-story p {
                     font-size: 20px;
+					font-weight: bold;
                 }
             </style>
             <div class="hero__background">
@@ -33,13 +34,13 @@ while ( have_posts() ) : the_post();
             <div class="hero__content">
                 <div class="container-xl">
                     <div class="row">
-                        <div class="column-8 column-md-7 has-white-color">
-                            <h1 class="has-gold-color m-b-0 font-family-sans" style="text-transform:uppercase;">Stories</h1>
+                        <div class="column-8 column-md-12 has-white-color">
+                            <!-- <h1 class="has-gold-color m-b-0 font-family-sans" style="text-transform:uppercase;">Stories</h1> -->
                             <h2 class="has-text-color has-2-xl-font-size">
                                 <a class="has-white-color" style="text-decoration:none;" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
-                            <?php the_excerpt(); ?>
-                            <div class="wp-container-1 wp-block-buttons">
+							<?php the_excerpt(); ?>
+							    <div class="wp-container-1 wp-block-buttons">
                                 <div class="wp-block-button">
                                     <a class="wp-block-button__link has-white-color has-gold-background-color has-text-color has-background" href="<?php the_permalink(); ?>">Read more</a>
                                 </div>
