@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../template-parts/blocks/donate-form/donate-form-component.php';
+require_once __DIR__ . '/../template-parts/blocks/icon-thermometer/icon-thermometer-component.php';
 require_once __DIR__ . '/../template-parts/blocks/story-card/story-card-component.php';
 
 function iranalive_blocktypes() {
@@ -136,6 +137,16 @@ function iranalive_blocktypes() {
                 'customClassName'   => true,
                 'jsx' 			    => true,
             ]
+        ) );
+
+        // ICON THERMOMETER
+        acf_register_block_type( array(
+            'name'              => 'icon-thermometer',
+            'title'             => __( 'Icon Thermometer', 'iran-alive' ),
+            'description'       => __( 'A thermometer with an icon', 'iran-alive' ),
+            'render_template'   => 'template-parts/blocks/icon-thermometer/icon-thermometer.php',
+            'category'          => 'layout',
+            'keywords'          => array( 'icon', 'thermometer' )
         ) );
 
         // LIST
